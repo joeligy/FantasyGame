@@ -1,0 +1,724 @@
+fileFormatVersion: 2
+guid: c2540fcfb13538e4aba26aa748e3df60
+timeCreated: 1524480240
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Door_low002
+    100002: //RootNode
+    100004: Roof_low007
+    100006: wall01_low015
+    100008: wall01_low016
+    100010: wall01_low021
+    100012: wall01_low028
+    100014: wall01_low029
+    100016: wall01_low034
+    100018: wall01_low038
+    100020: wall01_low039
+    100022: wall01_low040
+    100024: wall01_low041
+    100026: wall01_low042
+    100028: wall01_low044
+    100030: wall01_low045
+    100032: wall01_low046
+    100034: wallRoof02_low007
+    100036: Window002
+    100038: Window003
+    100040: window003
+    100042: Window006
+    100044: Window007
+    100046: window02_low003
+    100048: window02_low004
+    100050: Door_low003
+    100052: House01_LOD0
+    100054: House01_LOD1
+    100056: Roof_low008
+    100058: wall01_low047
+    100060: wall01_low048
+    100062: wall01_low049
+    100064: wall01_low050
+    100066: wall01_low051
+    100068: wall01_low052
+    100070: wall01_low053
+    100072: wall01_low054
+    100074: wall01_low055
+    100076: wall01_low056
+    100078: wall01_low057
+    100080: wall01_low058
+    100082: wall01_low059
+    100084: wall01_low060
+    100086: wallRoof02_low008
+    100088: window004
+    100090: Window008
+    100092: Window009
+    100094: Window010
+    100096: Window011
+    100098: window02_low005
+    100100: window02_low006
+    100102: Door_low004
+    100104: House01_LOD2
+    100106: Roof_low009
+    100108: wall01_low061
+    100110: wall01_low063
+    100112: wall01_low064
+    100114: wall01_low065
+    100116: wall01_low066
+    100118: wall01_low067
+    100120: wall01_low068
+    100122: wall01_low069
+    100124: wall01_low070
+    100126: wall01_low071
+    100128: wall01_low072
+    100130: wall01_low073
+    100132: wall01_low074
+    100134: wallRoof02_low009
+    100136: window005
+    100138: Window012
+    100140: Window013
+    100142: Window014
+    100144: Window015
+    100146: window02_low007
+    100148: window02_low008
+    100150: Door
+    100152: Door 1
+    100154: Door 2
+    100156: WinDoorL
+    100158: WinDoorL 1
+    100160: WinDoorL 10
+    100162: WinDoorL 11
+    100164: WinDoorL 2
+    100166: WinDoorL 3
+    100168: WinDoorL 4
+    100170: WinDoorL 5
+    100172: WinDoorL 6
+    100174: WinDoorL 7
+    100176: WinDoorL 8
+    100178: WinDoorL 9
+    100180: WinDoorR
+    100182: WinDoorR 1
+    100184: WinDoorR 10
+    100186: WinDoorR 11
+    100188: WinDoorR 2
+    100190: WinDoorR 3
+    100192: WinDoorR 4
+    100194: WinDoorR 5
+    100196: WinDoorR 6
+    100198: WinDoorR 7
+    100200: WinDoorR 8
+    100202: WinDoorR 9
+    100204: Window01
+    100206: Window01 1
+    100208: Window01 2
+    100210: Window02
+    100212: Window02 1
+    100214: Window02 2
+    100216: Window03
+    100218: Window03 1
+    100220: Window03 2
+    100222: Window04
+    100224: Window04 1
+    100226: Window04 2
+    100228: Window05
+    100230: Window05 1
+    100232: Window05 2
+    100234: Window06
+    100236: Window06 1
+    100238: Window06 2
+    100240: Window07
+    100242: Window07 1
+    100244: Window07 2
+    400000: Door_low002
+    400002: //RootNode
+    400004: Roof_low007
+    400006: wall01_low015
+    400008: wall01_low016
+    400010: wall01_low021
+    400012: wall01_low028
+    400014: wall01_low029
+    400016: wall01_low034
+    400018: wall01_low038
+    400020: wall01_low039
+    400022: wall01_low040
+    400024: wall01_low041
+    400026: wall01_low042
+    400028: wall01_low044
+    400030: wall01_low045
+    400032: wall01_low046
+    400034: wallRoof02_low007
+    400036: Window002
+    400038: Window003
+    400040: window003
+    400042: Window006
+    400044: Window007
+    400046: window02_low003
+    400048: window02_low004
+    400050: Door_low003
+    400052: House01_LOD0
+    400054: House01_LOD1
+    400056: Roof_low008
+    400058: wall01_low047
+    400060: wall01_low048
+    400062: wall01_low049
+    400064: wall01_low050
+    400066: wall01_low051
+    400068: wall01_low052
+    400070: wall01_low053
+    400072: wall01_low054
+    400074: wall01_low055
+    400076: wall01_low056
+    400078: wall01_low057
+    400080: wall01_low058
+    400082: wall01_low059
+    400084: wall01_low060
+    400086: wallRoof02_low008
+    400088: window004
+    400090: Window008
+    400092: Window009
+    400094: Window010
+    400096: Window011
+    400098: window02_low005
+    400100: window02_low006
+    400102: Door_low004
+    400104: House01_LOD2
+    400106: Roof_low009
+    400108: wall01_low061
+    400110: wall01_low063
+    400112: wall01_low064
+    400114: wall01_low065
+    400116: wall01_low066
+    400118: wall01_low067
+    400120: wall01_low068
+    400122: wall01_low069
+    400124: wall01_low070
+    400126: wall01_low071
+    400128: wall01_low072
+    400130: wall01_low073
+    400132: wall01_low074
+    400134: wallRoof02_low009
+    400136: window005
+    400138: Window012
+    400140: Window013
+    400142: Window014
+    400144: Window015
+    400146: window02_low007
+    400148: window02_low008
+    400150: Door
+    400152: Door 1
+    400154: Door 2
+    400156: WinDoorL
+    400158: WinDoorL 1
+    400160: WinDoorL 10
+    400162: WinDoorL 11
+    400164: WinDoorL 2
+    400166: WinDoorL 3
+    400168: WinDoorL 4
+    400170: WinDoorL 5
+    400172: WinDoorL 6
+    400174: WinDoorL 7
+    400176: WinDoorL 8
+    400178: WinDoorL 9
+    400180: WinDoorR
+    400182: WinDoorR 1
+    400184: WinDoorR 10
+    400186: WinDoorR 11
+    400188: WinDoorR 2
+    400190: WinDoorR 3
+    400192: WinDoorR 4
+    400194: WinDoorR 5
+    400196: WinDoorR 6
+    400198: WinDoorR 7
+    400200: WinDoorR 8
+    400202: WinDoorR 9
+    400204: Window01
+    400206: Window01 1
+    400208: Window01 2
+    400210: Window02
+    400212: Window02 1
+    400214: Window02 2
+    400216: Window03
+    400218: Window03 1
+    400220: Window03 2
+    400222: Window04
+    400224: Window04 1
+    400226: Window04 2
+    400228: Window05
+    400230: Window05 1
+    400232: Window05 2
+    400234: Window06
+    400236: Window06 1
+    400238: Window06 2
+    400240: Window07
+    400242: Window07 1
+    400244: Window07 2
+    2100000: Walls
+    2100002: Woods
+    2100004: Wood
+    2300000: Door_low002
+    2300002: Roof_low007
+    2300004: wall01_low015
+    2300006: wall01_low016
+    2300008: wall01_low021
+    2300010: wall01_low028
+    2300012: wall01_low029
+    2300014: wall01_low034
+    2300016: wall01_low038
+    2300018: wall01_low039
+    2300020: wall01_low040
+    2300022: wall01_low041
+    2300024: wall01_low042
+    2300026: wall01_low044
+    2300028: wall01_low045
+    2300030: wall01_low046
+    2300032: wallRoof02_low007
+    2300034: Window002
+    2300036: Window003
+    2300038: window003
+    2300040: Window006
+    2300042: Window007
+    2300044: window02_low003
+    2300046: window02_low004
+    2300048: Door_low003
+    2300050: Roof_low008
+    2300052: wall01_low047
+    2300054: wall01_low048
+    2300056: wall01_low049
+    2300058: wall01_low050
+    2300060: wall01_low051
+    2300062: wall01_low052
+    2300064: wall01_low053
+    2300066: wall01_low054
+    2300068: wall01_low055
+    2300070: wall01_low056
+    2300072: wall01_low057
+    2300074: wall01_low058
+    2300076: wall01_low059
+    2300078: wall01_low060
+    2300080: wallRoof02_low008
+    2300082: window004
+    2300084: Window008
+    2300086: Window009
+    2300088: Window010
+    2300090: Window011
+    2300092: window02_low005
+    2300094: window02_low006
+    2300096: Door_low004
+    2300098: Roof_low009
+    2300100: wall01_low061
+    2300102: wall01_low063
+    2300104: wall01_low064
+    2300106: wall01_low065
+    2300108: wall01_low066
+    2300110: wall01_low067
+    2300112: wall01_low068
+    2300114: wall01_low069
+    2300116: wall01_low070
+    2300118: wall01_low071
+    2300120: wall01_low072
+    2300122: wall01_low073
+    2300124: wall01_low074
+    2300126: wallRoof02_low009
+    2300128: window005
+    2300130: Window012
+    2300132: Window013
+    2300134: Window014
+    2300136: Window015
+    2300138: window02_low007
+    2300140: window02_low008
+    2300142: House01_LOD0
+    2300144: House01_LOD1
+    2300146: House01_LOD2
+    2300148: //RootNode
+    2300150: Door
+    2300152: Door 1
+    2300154: Door 2
+    2300156: WinDoorL
+    2300158: WinDoorL 1
+    2300160: WinDoorL 10
+    2300162: WinDoorL 11
+    2300164: WinDoorL 2
+    2300166: WinDoorL 3
+    2300168: WinDoorL 4
+    2300170: WinDoorL 5
+    2300172: WinDoorL 6
+    2300174: WinDoorL 7
+    2300176: WinDoorL 8
+    2300178: WinDoorL 9
+    2300180: WinDoorR
+    2300182: WinDoorR 1
+    2300184: WinDoorR 10
+    2300186: WinDoorR 11
+    2300188: WinDoorR 2
+    2300190: WinDoorR 3
+    2300192: WinDoorR 4
+    2300194: WinDoorR 5
+    2300196: WinDoorR 6
+    2300198: WinDoorR 7
+    2300200: WinDoorR 8
+    2300202: WinDoorR 9
+    2300204: Window01
+    2300206: Window01 1
+    2300208: Window01 2
+    2300210: Window02
+    2300212: Window02 1
+    2300214: Window02 2
+    2300216: Window03
+    2300218: Window03 1
+    2300220: Window03 2
+    2300222: Window04
+    2300224: Window04 1
+    2300226: Window04 2
+    2300228: Window05
+    2300230: Window05 1
+    2300232: Window05 2
+    2300234: Window06
+    2300236: Window06 1
+    2300238: Window06 2
+    2300240: Window07
+    2300242: Window07 1
+    2300244: Window07 2
+    3300000: Door_low002
+    3300002: Roof_low007
+    3300004: wall01_low015
+    3300006: wall01_low016
+    3300008: wall01_low021
+    3300010: wall01_low028
+    3300012: wall01_low029
+    3300014: wall01_low034
+    3300016: wall01_low038
+    3300018: wall01_low039
+    3300020: wall01_low040
+    3300022: wall01_low041
+    3300024: wall01_low042
+    3300026: wall01_low044
+    3300028: wall01_low045
+    3300030: wall01_low046
+    3300032: wallRoof02_low007
+    3300034: Window002
+    3300036: Window003
+    3300038: window003
+    3300040: Window006
+    3300042: Window007
+    3300044: window02_low003
+    3300046: window02_low004
+    3300048: Door_low003
+    3300050: Roof_low008
+    3300052: wall01_low047
+    3300054: wall01_low048
+    3300056: wall01_low049
+    3300058: wall01_low050
+    3300060: wall01_low051
+    3300062: wall01_low052
+    3300064: wall01_low053
+    3300066: wall01_low054
+    3300068: wall01_low055
+    3300070: wall01_low056
+    3300072: wall01_low057
+    3300074: wall01_low058
+    3300076: wall01_low059
+    3300078: wall01_low060
+    3300080: wallRoof02_low008
+    3300082: window004
+    3300084: Window008
+    3300086: Window009
+    3300088: Window010
+    3300090: Window011
+    3300092: window02_low005
+    3300094: window02_low006
+    3300096: Door_low004
+    3300098: Roof_low009
+    3300100: wall01_low061
+    3300102: wall01_low063
+    3300104: wall01_low064
+    3300106: wall01_low065
+    3300108: wall01_low066
+    3300110: wall01_low067
+    3300112: wall01_low068
+    3300114: wall01_low069
+    3300116: wall01_low070
+    3300118: wall01_low071
+    3300120: wall01_low072
+    3300122: wall01_low073
+    3300124: wall01_low074
+    3300126: wallRoof02_low009
+    3300128: window005
+    3300130: Window012
+    3300132: Window013
+    3300134: Window014
+    3300136: Window015
+    3300138: window02_low007
+    3300140: window02_low008
+    3300142: House01_LOD0
+    3300144: House01_LOD1
+    3300146: House01_LOD2
+    3300148: //RootNode
+    3300150: Door
+    3300152: Door 1
+    3300154: Door 2
+    3300156: WinDoorL
+    3300158: WinDoorL 1
+    3300160: WinDoorL 10
+    3300162: WinDoorL 11
+    3300164: WinDoorL 2
+    3300166: WinDoorL 3
+    3300168: WinDoorL 4
+    3300170: WinDoorL 5
+    3300172: WinDoorL 6
+    3300174: WinDoorL 7
+    3300176: WinDoorL 8
+    3300178: WinDoorL 9
+    3300180: WinDoorR
+    3300182: WinDoorR 1
+    3300184: WinDoorR 10
+    3300186: WinDoorR 11
+    3300188: WinDoorR 2
+    3300190: WinDoorR 3
+    3300192: WinDoorR 4
+    3300194: WinDoorR 5
+    3300196: WinDoorR 6
+    3300198: WinDoorR 7
+    3300200: WinDoorR 8
+    3300202: WinDoorR 9
+    3300204: Window01
+    3300206: Window01 1
+    3300208: Window01 2
+    3300210: Window02
+    3300212: Window02 1
+    3300214: Window02 2
+    3300216: Window03
+    3300218: Window03 1
+    3300220: Window03 2
+    3300222: Window04
+    3300224: Window04 1
+    3300226: Window04 2
+    3300228: Window05
+    3300230: Window05 1
+    3300232: Window05 2
+    3300234: Window06
+    3300236: Window06 1
+    3300238: Window06 2
+    3300240: Window07
+    3300242: Window07 1
+    3300244: Window07 2
+    4300000: wall01_low015
+    4300002: wall01_low016
+    4300004: wall01_low021
+    4300006: Roof_low007
+    4300008: wall01_low028
+    4300010: wall01_low029
+    4300012: wall01_low034
+    4300014: wall01_low038
+    4300016: wall01_low039
+    4300018: wall01_low040
+    4300020: wall01_low041
+    4300022: Window002
+    4300024: Window003
+    4300026: wall01_low042
+    4300028: Door_low002
+    4300030: wall01_low044
+    4300032: wall01_low045
+    4300034: Window006
+    4300036: window02_low003
+    4300038: wall01_low046
+    4300040: wallRoof02_low007
+    4300042: window003
+    4300044: Window007
+    4300046: window02_low004
+    4300048: wall01_low047
+    4300050: wall01_low048
+    4300052: wall01_low049
+    4300054: Roof_low008
+    4300056: wall01_low050
+    4300058: wall01_low052
+    4300060: wall01_low054
+    4300062: wall01_low055
+    4300064: wall01_low057
+    4300066: Door_low003
+    4300068: wall01_low058
+    4300070: wall01_low059
+    4300072: Window010
+    4300074: wall01_low060
+    4300076: wallRoof02_low008
+    4300078: window004
+    4300080: Window011
+    4300082: window02_low006
+    4300084: Window009
+    4300086: Window008
+    4300088: window02_low005
+    4300090: wall01_low056
+    4300092: wall01_low053
+    4300094: wall01_low051
+    4300096: Window012
+    4300098: Window013
+    4300100: Window014
+    4300102: Window015
+    4300104: window005
+    4300106: window02_low007
+    4300108: window02_low008
+    4300110: wallRoof02_low009
+    4300112: wall01_low061
+    4300114: wall01_low063
+    4300116: wall01_low064
+    4300118: wall01_low065
+    4300120: wall01_low066
+    4300122: wall01_low067
+    4300124: wall01_low068
+    4300126: wall01_low069
+    4300128: wall01_low070
+    4300130: wall01_low071
+    4300132: wall01_low072
+    4300134: wall01_low073
+    4300136: wall01_low074
+    4300138: Roof_low009
+    4300140: Door_low004
+    4300142: House01_LOD0
+    4300144: House01_LOD1
+    4300146: House01_LOD2
+    4300148: Window01
+    4300150: WinDoorL
+    4300152: WinDoorR
+    4300154: Window02
+    4300156: Window03
+    4300158: WinDoorL
+    4300160: WinDoorR
+    4300162: Window04
+    4300164: Window05
+    4300166: WinDoorR
+    4300168: WinDoorL
+    4300170: Window06
+    4300172: Window07
+    4300174: WinDoorL
+    4300176: WinDoorR
+    4300178: Door
+    4300180: Window01
+    4300182: WinDoorR
+    4300184: WinDoorL
+    4300186: Window02
+    4300188: Window03
+    4300190: WinDoorR
+    4300192: WinDoorL
+    4300194: Window04
+    4300196: Window05
+    4300198: WinDoorR
+    4300200: WinDoorL
+    4300202: Window06
+    4300204: Window07
+    4300206: WinDoorR
+    4300208: WinDoorL
+    4300210: Door
+    4300212: Window01
+    4300214: WinDoorL
+    4300216: WinDoorR
+    4300218: Window02
+    4300220: Window03
+    4300222: WinDoorR
+    4300224: WinDoorL
+    4300226: Window04
+    4300228: Window05
+    4300230: WinDoorL
+    4300232: WinDoorR
+    4300234: Window06
+    4300236: Window07
+    4300238: WinDoorL
+    4300240: WinDoorR
+    4300242: Door
+    9500000: //RootNode
+    20500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls
+    second: {fileID: 2100000, guid: 766bdc2fba8547746961adcc55485e5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: 766bdc2fba8547746961adcc55485e5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Woods
+    second: {fileID: 2100000, guid: dc4f5cb8f4162b64b8ae6e668f8bd17d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.125
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

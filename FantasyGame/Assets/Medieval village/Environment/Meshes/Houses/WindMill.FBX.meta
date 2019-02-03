@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: 53955232331fe8d41957534c8a75d479
+timeCreated: 1545056720
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Door_LOD0
+    100002: Door_LOD1
+    100004: Door_LOD2
+    100006: Rotaor_LOD0
+    100008: Rotaor_LOD002
+    100010: Rotaor_LOD1
+    100012: RotatorBase_LOD0
+    100014: RotatorBase_LOD1
+    100016: RotatorBase_LOD2
+    100018: WindBoard_LOD0
+    100020: WindBoard_LOD002
+    100022: WindBoard_LOD1
+    100024: //RootNode
+    100026: WindMill_LOD0
+    100028: WindMill_LOD1
+    100030: WindMill_LOD2
+    100032: Window2_LOD0
+    100034: Window2_LOD1
+    100036: Window2_LOD2
+    100038: Window_LOD0
+    100040: Window_LOD1
+    100042: Window_LOD2
+    400000: Door_LOD0
+    400002: Door_LOD1
+    400004: Door_LOD2
+    400006: Rotaor_LOD0
+    400008: Rotaor_LOD002
+    400010: Rotaor_LOD1
+    400012: RotatorBase_LOD0
+    400014: RotatorBase_LOD1
+    400016: RotatorBase_LOD2
+    400018: WindBoard_LOD0
+    400020: WindBoard_LOD002
+    400022: WindBoard_LOD1
+    400024: //RootNode
+    400026: WindMill_LOD0
+    400028: WindMill_LOD1
+    400030: WindMill_LOD2
+    400032: Window2_LOD0
+    400034: Window2_LOD1
+    400036: Window2_LOD2
+    400038: Window_LOD0
+    400040: Window_LOD1
+    400042: Window_LOD2
+    2100000: Woods
+    2100002: Walls
+    2100004: Cloth
+    2300000: Door_LOD0
+    2300002: Door_LOD1
+    2300004: Door_LOD2
+    2300006: Rotaor_LOD0
+    2300008: Rotaor_LOD002
+    2300010: Rotaor_LOD1
+    2300012: RotatorBase_LOD0
+    2300014: RotatorBase_LOD1
+    2300016: RotatorBase_LOD2
+    2300018: WindBoard_LOD0
+    2300020: WindBoard_LOD002
+    2300022: WindBoard_LOD1
+    2300024: WindMill_LOD0
+    2300026: WindMill_LOD1
+    2300028: WindMill_LOD2
+    2300030: Window2_LOD0
+    2300032: Window2_LOD1
+    2300034: Window2_LOD2
+    2300036: Window_LOD0
+    2300038: Window_LOD1
+    2300040: Window_LOD2
+    3300000: Door_LOD0
+    3300002: Door_LOD1
+    3300004: Door_LOD2
+    3300006: Rotaor_LOD0
+    3300008: Rotaor_LOD002
+    3300010: Rotaor_LOD1
+    3300012: RotatorBase_LOD0
+    3300014: RotatorBase_LOD1
+    3300016: RotatorBase_LOD2
+    3300018: WindBoard_LOD0
+    3300020: WindBoard_LOD002
+    3300022: WindBoard_LOD1
+    3300024: WindMill_LOD0
+    3300026: WindMill_LOD1
+    3300028: WindMill_LOD2
+    3300030: Window2_LOD0
+    3300032: Window2_LOD1
+    3300034: Window2_LOD2
+    3300036: Window_LOD0
+    3300038: Window_LOD1
+    3300040: Window_LOD2
+    4300000: WindMill_LOD0
+    4300002: Door_LOD0
+    4300004: Window_LOD0
+    4300006: Window2_LOD0
+    4300008: RotatorBase_LOD0
+    4300010: Rotaor_LOD0
+    4300012: WindBoard_LOD0
+    4300014: WindMill_LOD2
+    4300016: Door_LOD2
+    4300018: Window_LOD2
+    4300020: Window2_LOD2
+    4300022: RotatorBase_LOD2
+    4300024: Rotaor_LOD002
+    4300026: WindBoard_LOD002
+    4300028: WindMill_LOD1
+    4300030: Door_LOD1
+    4300032: Window_LOD1
+    4300034: Window2_LOD1
+    4300036: RotatorBase_LOD1
+    4300038: Rotaor_LOD1
+    4300040: WindBoard_LOD1
+    20500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cloth
+    second: {fileID: 2100000, guid: 47ea9301fefbf7949b2c3aac051f3578, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls
+    second: {fileID: 2100000, guid: 766bdc2fba8547746961adcc55485e5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Woods
+    second: {fileID: 2100000, guid: dc4f5cb8f4162b64b8ae6e668f8bd17d, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.125
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
