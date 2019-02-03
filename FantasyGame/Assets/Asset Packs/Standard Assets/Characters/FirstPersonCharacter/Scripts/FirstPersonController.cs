@@ -61,6 +61,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            if (PauseMenuEnabled())
+            {
+                m_MouseLook.lockCursor = false;
+                m_MouseLook.UpdateCursorLock();
+                return;
+            }
+            else
+            {
+                m_MouseLook.lockCursor = true;
+                m_MouseLook.UpdateCursorLock();
+            }
+
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -81,6 +93,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+        }
+
+        private bool PauseMenuEnabled()
+        {
+            GreatArcStudios.PauseManager pauseManager = FindObjectOfType<GreatArcStudios.PauseManager>();
+            return pauseManager.pauseMenuActive;
         }
 
 
