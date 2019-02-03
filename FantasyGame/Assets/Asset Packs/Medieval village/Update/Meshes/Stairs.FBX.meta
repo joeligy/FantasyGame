@@ -1,0 +1,206 @@
+fileFormatVersion: 2
+guid: 8413f0a012fd13b48afcc6c19e6269c1
+timeCreated: 1543580940
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Moan1
+    100004: Moan2
+    100006: StairRug001
+    100008: StairRug002
+    100010: Stairs
+    100012: StairWood1
+    100014: StairWood11
+    100016: StairWood12
+    100018: StairWood13
+    100020: StairWood14
+    100022: StairWood15
+    100024: StairWood2
+    100026: StairWood3
+    100028: StairWood4
+    100030: StairWood5
+    100032: StairWood6
+    100034: StairWood7
+    100036: StairWood8
+    100038: StairWood9
+    400000: //RootNode
+    400002: Moan1
+    400004: Moan2
+    400006: StairRug001
+    400008: StairRug002
+    400010: Stairs
+    400012: StairWood1
+    400014: StairWood11
+    400016: StairWood12
+    400018: StairWood13
+    400020: StairWood14
+    400022: StairWood15
+    400024: StairWood2
+    400026: StairWood3
+    400028: StairWood4
+    400030: StairWood5
+    400032: StairWood6
+    400034: StairWood7
+    400036: StairWood8
+    400038: StairWood9
+    2100000: IntPropses3
+    2100002: IntPropses2
+    2100004: Cloth
+    2300000: //RootNode
+    2300002: Moan1
+    2300004: Moan2
+    2300006: StairRug001
+    2300008: StairRug002
+    2300010: Stairs
+    2300012: StairWood1
+    2300014: StairWood11
+    2300016: StairWood12
+    2300018: StairWood13
+    2300020: StairWood14
+    2300022: StairWood15
+    2300024: StairWood2
+    2300026: StairWood3
+    2300028: StairWood4
+    2300030: StairWood5
+    2300032: StairWood6
+    2300034: StairWood7
+    2300036: StairWood8
+    2300038: StairWood9
+    3300000: //RootNode
+    3300002: Moan1
+    3300004: Moan2
+    3300006: StairRug001
+    3300008: StairRug002
+    3300010: Stairs
+    3300012: StairWood1
+    3300014: StairWood11
+    3300016: StairWood12
+    3300018: StairWood13
+    3300020: StairWood14
+    3300022: StairWood15
+    3300024: StairWood2
+    3300026: StairWood3
+    3300028: StairWood4
+    3300030: StairWood5
+    3300032: StairWood6
+    3300034: StairWood7
+    3300036: StairWood8
+    3300038: StairWood9
+    4300000: Stairs
+    4300002: Moan1
+    4300004: Moan2
+    4300006: StairWood1
+    4300008: StairWood2
+    4300010: StairWood3
+    4300012: StairWood4
+    4300014: StairWood5
+    4300016: StairWood6
+    4300018: StairWood7
+    4300020: StairWood8
+    4300022: StairWood9
+    4300024: StairWood11
+    4300026: StairWood12
+    4300028: StairWood13
+    4300030: StairWood14
+    4300032: StairWood15
+    4300034: StairRug001
+    4300036: StairRug002
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cloth
+    second: {fileID: 2100000, guid: 40452d0518fa3e74ea10906a6efc9668, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: IntPropses2
+    second: {fileID: 2100000, guid: 221b85ea7a1476d49b49956e1afce37f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: IntPropses3
+    second: {fileID: 2100000, guid: 7ba289591af21154893a9b3b356a0929, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
