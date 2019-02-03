@@ -426,7 +426,7 @@ namespace GreatArcStudios
             //colorCrossfade();
             if (mainPanel.active == true)
             {
-                pauseMenu.text = "Pause Menu";
+                pauseMenu.text = "Options";
             }
 
             if (CrossPlatformInputManager.GetButtonDown("Pause") && pauseMenuActive == false)
