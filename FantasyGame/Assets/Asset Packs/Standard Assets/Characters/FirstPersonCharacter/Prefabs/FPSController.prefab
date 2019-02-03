@@ -73,8 +73,8 @@ MonoBehaviour:
   m_StickToGroundForce: 10
   m_GravityMultiplier: 2
   m_MouseLook:
-    XSensitivity: 2
-    YSensitivity: 2
+    XSensitivity: 5
+    YSensitivity: 5
     clampVerticalRotation: 1
     MinimumX: -90
     MaximumX: 90
@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 2000000}
   - component: {fileID: 8100000}
   - component: {fileID: 12474086}
+  - component: {fileID: 1332971382}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -380,3 +381,16 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
+--- !u!114 &1332971382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: c1a5c2988061dab458b5c9dc3ec0ca16, type: 2}

@@ -64,13 +64,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (PauseMenuEnabled())
             {
                 m_MouseLook.lockCursor = false;
-                m_MouseLook.UpdateCursorLock();
+                m_MouseLook.SetCursorLock(false);
                 return;
             }
             else
             {
                 m_MouseLook.lockCursor = true;
-                m_MouseLook.UpdateCursorLock();
+                m_MouseLook.SetCursorLock(true);
             }
 
             RotateView();
