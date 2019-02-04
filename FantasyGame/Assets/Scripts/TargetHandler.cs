@@ -15,13 +15,13 @@ public class TargetHandler : MonoBehaviour
     public Texture2D door; //Cursor for doorways
     public Texture2D combat; //Cursor for combat actions
 
-    enum CursorType { Pointer, Door, Target, Combat };
-    CursorType cursorType;
+    //Maximum distance to interact with objects
+    float maxInteractionDistance = 4f;
 
     // Start is called before the first frame update
     void Start()
     {
-        cursorType = CursorType.Pointer;
+
     }
 
     // Update is called once per frame
@@ -32,35 +32,50 @@ public class TargetHandler : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             UpdateTargetCursorIcon(hit);
-            HandleUserInput();
+            if(hit.distance < maxInteractionDistance)
+            {
+                HandleInteraction(hit);
+            }
         }
     }
 
     private void UpdateTargetCursorIcon(RaycastHit hit)
     {
-        if (hit.collider.gameObject.tag == "Door" && hit.distance < 3)
+        if (hit.collider.gameObject.tag == "Door" && hit.distance < maxInteractionDistance)
         {
-            cursorType = CursorType.Door;
             Target targetCursor = FindObjectOfType<Target>();
             targetCursor.GetComponent<RawImage>().texture = door;
             targetCursor.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
         }
+        else if(hit.collider.gameObject.tag == "NPC" && hit.distance < maxInteractionDistance)
+        {
+            Target targetCursor = FindObjectOfType<Target>();
+            targetCursor.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
+            targetCursor.GetComponent<RawImage>().texture = target;
+        }
         else
         {
-            cursorType = CursorType.Pointer;
             Target targetCursor = FindObjectOfType<Target>();
             targetCursor.GetComponent<RectTransform>().sizeDelta = new Vector2(5, 5);
             targetCursor.GetComponent<RawImage>().texture = pointer;
         }
     }
 
-    private void HandleUserInput()
+    private void HandleInteraction(RaycastHit hit)
     {
+        GameObject targetObject = hit.collider.gameObject;
         if (CrossPlatformInputManager.GetButtonDown("Interact")) {
-            if(cursorType == CursorType.Door)
+            if(targetObject.tag == "Door")
             {
-                SceneManager.LoadScene("Shuli's House");
+                LoadScene("Shuli's House");
             }
         }
+    }
+
+    private void LoadScene(string sceneName)
+    {
+        PlayerLocationCache cache = FindObjectOfType<PlayerLocationCache>();
+        cache.SavePreviousSceneData(SceneManager.GetActiveScene().name, transform.position);
+        SceneManager.LoadScene(sceneName);
     }
 }

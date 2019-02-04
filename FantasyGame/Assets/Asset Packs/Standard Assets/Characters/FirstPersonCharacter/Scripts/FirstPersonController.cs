@@ -61,7 +61,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            if (PauseMenuEnabled())
+            if (PauseMenuEnabled() || ConversationActive())
             {
                 m_MouseLook.lockCursor = false;
                 m_MouseLook.SetCursorLock(false);
@@ -101,6 +101,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             return pauseManager.pauseMenuActive;
         }
 
+        private bool ConversationActive()
+        {
+            PixelCrushers.DialogueSystem.DialogueSystemController controller = FindObjectOfType<PixelCrushers.DialogueSystem.DialogueSystemController>();
+            return controller.isConversationActive;
+        }
 
         private void PlayLandingSound()
         {
