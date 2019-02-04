@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class DoorInfo : MonoBehaviour
 {
 
-    [Tooltip("The scene this door leads to")] [SerializeField] Scene scene;
+    [Tooltip("The scene this door leads to")] [SerializeField] public string sceneName;
 
     // Start is called before the first frame update
     void Start()

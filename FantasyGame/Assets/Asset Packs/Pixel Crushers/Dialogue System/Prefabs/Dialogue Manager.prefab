@@ -141,7 +141,7 @@ MonoBehaviour:
       alwaysForceResponseMenu: 1
       includeInvalidEntries: 0
       responseTimeout: 0
-    dialogueUI: {fileID: 164380, guid: c0c96af2230a56b45b77a95543e6ac50, type: 3}
+    dialogueUI: {fileID: 101180, guid: 5ba51781a19f8a843abeb2d304d0d26e, type: 3}
     localizationSettings:
       language: 
       useSystemLanguage: 0

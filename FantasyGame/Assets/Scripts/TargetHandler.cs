@@ -67,7 +67,12 @@ public class TargetHandler : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonDown("Interact")) {
             if(targetObject.tag == "Door")
             {
-                LoadScene("Shuli's House");
+                DoorInfo doorInfo = targetObject.GetComponent<DoorInfo>();
+                string doorSceneName = doorInfo.sceneName;
+                if(doorSceneName != null)
+                {
+                    LoadScene(doorSceneName);
+                }
             }
         }
     }
@@ -75,7 +80,7 @@ public class TargetHandler : MonoBehaviour
     private void LoadScene(string sceneName)
     {
         PlayerLocationCache cache = FindObjectOfType<PlayerLocationCache>();
-        cache.SavePreviousSceneData(SceneManager.GetActiveScene().name, transform.position);
+        cache.SavePreviousSceneData(SceneManager.GetActiveScene().name, sceneName, transform.position, transform.rotation);
         SceneManager.LoadScene(sceneName);
     }
 }

@@ -510,3 +510,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 484c8518ee989458a9561bd5a3260217, type: 3}
+--- !u!1 &1835465357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2037938789, guid: 484c8518ee989458a9561bd5a3260217,
+    type: 3}
+  m_PrefabInstance: {fileID: 1835465356}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1835465358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835465357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f57d39d1717c4e85b7749f83bd48770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: New Eidolon Village
