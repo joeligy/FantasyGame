@@ -14,12 +14,12 @@ public class PlayerLocationCacheLoader : MonoBehaviour
             transform.rotation = cache.playerRotationToLoad;
         }
         transform.position = new Vector3(0, 0, 0);
-        print(transform.position);
+        //print(transform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        print(transform.position);
+        //print(transform.position);
     }
 }
