@@ -177,13 +177,12 @@ namespace GreatArcStudios
             if (CrossPlatformInputManager.GetButtonDown("Pause") && pauseMenuActive == false)
             {
                 uiEventSystem.SetSelectedGameObject(defaultSelectedMain);
+                Time.timeScale = 0;
 
                 pauseMenuActive = true;
                 mainPanel.SetActive(true);
-
                 TitleTexts.SetActive(true);
                 mask.SetActive(true);
-                Time.timeScale = 0;
             }
             else if(CrossPlatformInputManager.GetButtonDown("Pause") && pauseMenuActive == true) {
                 Time.timeScale = timeScale;
