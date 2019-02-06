@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerLocationCacheLoader : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         PlayerLocationCache cache = FindObjectOfType<PlayerLocationCache>();
         if(cache.useCacheOnSceneLoad)
@@ -13,8 +13,7 @@ public class PlayerLocationCacheLoader : MonoBehaviour
             transform.position = new Vector3(0, 0, 0);
             transform.rotation = cache.playerRotationToLoad;
         }
-        transform.position = new Vector3(0, 0, 0);
-        //print(transform.position);
+        transform.position = new Vector3(0, 500, 0);
     }
 
     // Update is called once per frame
