@@ -42,6 +42,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        private bool loadedInitialPosition;
+
         // Use this for initialization
         private void Start()
         {
@@ -55,6 +57,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+            loadedInitialPosition = false;
         }
 
 
@@ -114,9 +118,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_NextStep = m_StepCycle + .5f;
         }
 
-
+       
         private void FixedUpdate()
         {
+            //In the first call to fixed update, set the initial position of the FirstPersonController in the scene and return.
+            //This is kind of weird and janky, but for some reason putting the position initialization in the Start or Awake functions doesn't work.
+            //It has something to do with CharacterController and the .Move function.
+            if(!loadedInitialPosition)
+            {
+                transform.position = new Vector3(400, 150, 648);
+                loadedInitialPosition = true;
+                return;
+            }
+
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -148,7 +162,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.fixedDeltaTime;
             }
-            m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.fixedDeltaTime);
+
+      
+            m_CollisionFlags = m_CharacterController.Move(m_MoveDir * Time.fixedDeltaTime);
 
             ProgressStepCycle(speed);
             UpdateCameraPosition(speed);

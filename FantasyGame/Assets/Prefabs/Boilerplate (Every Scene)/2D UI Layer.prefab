@@ -1749,8 +1749,6 @@ MonoBehaviour:
   mainPanel: {fileID: 105994}
   TitleTexts: {fileID: 169192}
   mask: {fileID: 172732}
-  audioPanelAnimator: {fileID: 0}
-  vidPanelAnimator: {fileID: 0}
   quitPanelAnimator: {fileID: 9567834}
   pauseMenu: {fileID: 11480518}
   mainMenu: Pausemenu
@@ -1758,54 +1756,8 @@ MonoBehaviour:
   AOScriptName: 
   mainCam: {fileID: 0}
   mainCamObj: {fileID: 0}
-  detailDensity: 0
   timeScale: 1
-  terrain: {fileID: 0}
-  simpleTerrain: {fileID: 0}
-  aaCombo: {fileID: 0}
-  afCombo: {fileID: 0}
-  fovSlider: {fileID: 0}
-  modelQualSlider: {fileID: 0}
-  terrainQualSlider: {fileID: 0}
-  highQualTreeSlider: {fileID: 0}
-  renderDistSlider: {fileID: 0}
-  terrainDensitySlider: {fileID: 0}
-  shadowDistSlider: {fileID: 0}
-  audioMasterSlider: {fileID: 0}
-  audioMusicSlider: {fileID: 0}
-  audioEffectsSlider: {fileID: 0}
-  masterTexSlider: {fileID: 0}
-  shadowCascadesSlider: {fileID: 0}
-  vSyncToggle: {fileID: 0}
-  aoToggle: {fileID: 0}
-  dofToggle: {fileID: 0}
-  fullscreenToggle: {fileID: 0}
-  presetLabel: {fileID: 0}
-  resolutionLabel: {fileID: 0}
-  LODBias:
-  - 0.3
-  - 0.55
-  - 0.68
-  - 1.09
-  - 1.22
-  - 1.59
-  - 4.37
-  shadowDist:
-  - 12.6
-  - 17.4
-  - 29.7
-  - 82
-  - 110
-  - 338
-  - 800
-  music: []
-  effects: []
-  otherUIElements: []
-  hardCodeSomeVideoSettings: 0
-  useSimpleTerrain: 1
   uiEventSystem: {fileID: 11458448}
-  defaultSelectedVideo: {fileID: 0}
-  defaultSelectedAudio: {fileID: 0}
   defaultSelectedMain: {fileID: 125736}
 --- !u!1 &169192
 GameObject:
