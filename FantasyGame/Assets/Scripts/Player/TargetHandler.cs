@@ -83,7 +83,6 @@ public class TargetHandler : MonoBehaviour
         string doorSceneName = doorInfo.GetSceneName();
         if (doorSceneName != null)
         {
-            print(doorSceneName);
             SceneManager.LoadScene(doorSceneName);
         }
     }
