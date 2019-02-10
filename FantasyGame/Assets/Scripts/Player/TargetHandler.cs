@@ -41,7 +41,10 @@ public class TargetHandler : MonoBehaviour
 
     private void UpdateTargetCursorIcon(RaycastHit hit)
     {
-        if (hit.collider.gameObject.tag == "Door" && hit.distance < maxInteractionDistance)
+        GameObject targetObject = hit.collider.gameObject;
+        bool isDoor = targetObject.GetComponent<Door>();
+
+        if (isDoor && hit.distance < maxInteractionDistance)
         {
             Target targetCursor = FindObjectOfType<Target>();
             targetCursor.GetComponent<RawImage>().texture = door;
@@ -64,23 +67,24 @@ public class TargetHandler : MonoBehaviour
     private void HandleInteraction(RaycastHit hit)
     {
         GameObject targetObject = hit.collider.gameObject;
+        bool isDoor = targetObject.GetComponent<Door>();
+
         if (CrossPlatformInputManager.GetButtonDown("Interact")) {
-            if(targetObject.tag == "Door")
+            if(isDoor)
             {
-                DoorInfo doorInfo = targetObject.GetComponent<DoorInfo>();
-                string doorSceneName = doorInfo.sceneName;
-                if(doorSceneName != null)
-                {
-                    LoadScene(doorSceneName);
-                }
+                LoadScene(targetObject);
             }
         }
     }
 
-    private void LoadScene(string sceneName)
+    private void LoadScene(GameObject targetObject)
     {
-        PlayerLocationCache cache = FindObjectOfType<PlayerLocationCache>();
-        cache.SavePreviousSceneData(SceneManager.GetActiveScene().name, sceneName, transform.position, transform.rotation);
-        SceneManager.LoadScene(sceneName);
+        Door doorInfo = targetObject.GetComponent<Door>();
+        string doorSceneName = doorInfo.GetSceneName();
+        if (doorSceneName != null)
+        {
+            print(doorSceneName);
+            SceneManager.LoadScene(doorSceneName);
+        }
     }
 }

@@ -126,7 +126,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //It has something to do with CharacterController and the .Move function.
             if(!loadedInitialPosition)
             {
-                transform.position = new Vector3(400, 150, 648);
+                //transform.position = new Vector3(400, 150, 648);
                 loadedInitialPosition = true;
                 return;
             }
