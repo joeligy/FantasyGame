@@ -73,13 +73,13 @@ MonoBehaviour:
   m_StickToGroundForce: 10
   m_GravityMultiplier: 2
   m_MouseLook:
-    XSensitivity: 3
-    YSensitivity: 3
+    XSensitivity: 5
+    YSensitivity: 5
     clampVerticalRotation: 1
     MinimumX: -90
     MaximumX: 90
-    smooth: 0
-    smoothTime: 5
+    smooth: 1
+    smoothTime: 50
     lockCursor: 1
   m_UseFovKick: 1
   m_FovKick:
