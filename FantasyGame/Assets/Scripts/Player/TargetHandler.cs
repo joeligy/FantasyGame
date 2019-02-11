@@ -72,8 +72,21 @@ public class TargetHandler : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonDown("Interact")) {
             if(isDoor)
             {
+                SaveSpawnPoint(targetObject);
                 LoadScene(targetObject);
             }
+        }
+    }
+
+    private void SaveSpawnPoint(GameObject targetObject)
+    {
+        Door doorInfo = targetObject.GetComponent<Door>();
+        string spawnPoint = doorInfo.GetSpawnPointName();
+        if(spawnPoint.Length > 0)
+        {
+            PlayerSpawnManager playerSpawnManager = FindObjectOfType<PlayerSpawnManager>();
+            playerSpawnManager.spawnPoint = spawnPoint;
+
         }
     }
 

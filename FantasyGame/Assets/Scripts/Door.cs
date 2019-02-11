@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
 {
 
     [Tooltip("The scene this door leads to")] [SerializeField] string sceneName;
+    [Tooltip("The spawn point to start at (optional)")] [SerializeField] string spawnPointName;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +24,10 @@ public class Door : MonoBehaviour
     public string GetSceneName()
     {
         return sceneName;
+    }
+
+    public string GetSpawnPointName()
+    {
+        return spawnPointName;
     }
 }

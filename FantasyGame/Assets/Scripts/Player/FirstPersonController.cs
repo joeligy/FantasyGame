@@ -179,24 +179,32 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void SetPositionToSpawnPoint()
         {
-            GameObject playerSpawnPoints = GameObject.Find("Player Spawn Points");
-            if (!playerSpawnPoints) return;
+            Transform spawnPoint = GetSpawnPoint();
+            if (spawnPoint == null) return;
 
-            Transform selectedSpawnPoint = playerSpawnPoints.transform.Find("Van Graaf's House");
-            transform.position = selectedSpawnPoint.position;
+            transform.position = spawnPoint.position;
         }
 
         private void SetRotationToSpawnPoint()
         {
-            GameObject playerSpawnPoints = GameObject.Find("Player Spawn Points");
-            if (!playerSpawnPoints) return;
+            Transform spawnPoint = GetSpawnPoint();
+            if (spawnPoint == null) return;
 
-            Transform selectedSpawnPoint = playerSpawnPoints.transform.Find("Van Graaf's House");
-            if (!selectedSpawnPoint) return;
-
-            Vector3 spawnPointRotation = selectedSpawnPoint.rotation.eulerAngles;
-            transform.rotation = selectedSpawnPoint.rotation;
+            transform.rotation = spawnPoint.rotation;
         }
+
+        private Transform GetSpawnPoint()
+        {
+            GameObject playerSpawnPoints = GameObject.Find("Player Spawn Points");
+            if (!playerSpawnPoints) return null;
+
+            string playerSpawnPointName = FindObjectOfType<PlayerSpawnManager>().spawnPoint;
+            if (playerSpawnPointName.Length == 0) return null;
+
+            Transform selectedSpawnPoint = playerSpawnPoints.transform.Find(playerSpawnPointName);
+            return selectedSpawnPoint;
+        }
+
 
         private void PlayJumpSound()
         {

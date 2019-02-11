@@ -236,7 +236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &907372592
 PrefabInstance:
@@ -288,7 +288,7 @@ PrefabInstance:
     - target: {fileID: 6885264179108453399, guid: b216a68e18da845ae8fabc8aa2541268,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6885264179108453399, guid: b216a68e18da845ae8fabc8aa2541268,
         type: 3}
@@ -384,7 +384,7 @@ Transform:
   m_LocalScale: {x: 100, y: 1, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1473836888
 PrefabInstance:
@@ -427,7 +427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408398, guid: 861b75cfe59c43d45bdc2d2a2b73b221, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 408398, guid: 861b75cfe59c43d45bdc2d2a2b73b221, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -555,7 +555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1084293023, guid: 484c8518ee989458a9561bd5a3260217, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1084293023, guid: 484c8518ee989458a9561bd5a3260217, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -590,3 +590,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Rijks Glorious Bay
+  spawnPointName: Van Graaf's House
+--- !u!1001 &1929716823
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4273993899879656334, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_Name
+      value: Player Spawn Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335613511554192010, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 396.54498
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335613511554192010, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 58.032
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335613511554192010, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 647.877
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335613511554192010, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335613511554192010, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335613511554192010, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335613511554192010, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335613511554192010, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335613511554192010, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335613511554192010, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335613511554192010, guid: 5f248d6b30f884a96a60ff781053c8ab,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f248d6b30f884a96a60ff781053c8ab, type: 3}
