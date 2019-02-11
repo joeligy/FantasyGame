@@ -47,6 +47,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         private void Start()
         {
+            //Set rotation to the spawn point rotation before initializing the camera.
+            //Setting the position to the spawn point happens in the first called to "FixedUpdate".
+            SetRotationToSpawnPoint();
+            loadedInitialPosition = false;
+
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
@@ -57,8 +62,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
-
-            loadedInitialPosition = false;
         }
 
 
@@ -77,7 +80,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_MouseLook.SetCursorLock(true);
             }
 
-            RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
@@ -126,10 +128,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //It has something to do with CharacterController and the .Move function.
             if(!loadedInitialPosition)
             {
-                //transform.position = new Vector3(400, 150, 648);
+                SetPositionToSpawnPoint();
                 loadedInitialPosition = true;
                 return;
             }
+
+            RotateView();
+            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
 
             float speed;
             GetInput(out speed);
@@ -172,6 +177,26 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MouseLook.UpdateCursorLock();
         }
 
+        private void SetPositionToSpawnPoint()
+        {
+            GameObject playerSpawnPoints = GameObject.Find("Player Spawn Points");
+            if (!playerSpawnPoints) return;
+
+            Transform selectedSpawnPoint = playerSpawnPoints.transform.Find("Van Graaf's House");
+            transform.position = selectedSpawnPoint.position;
+        }
+
+        private void SetRotationToSpawnPoint()
+        {
+            GameObject playerSpawnPoints = GameObject.Find("Player Spawn Points");
+            if (!playerSpawnPoints) return;
+
+            Transform selectedSpawnPoint = playerSpawnPoints.transform.Find("Van Graaf's House");
+            if (!selectedSpawnPoint) return;
+
+            Vector3 spawnPointRotation = selectedSpawnPoint.rotation.eulerAngles;
+            transform.rotation = selectedSpawnPoint.rotation;
+        }
 
         private void PlayJumpSound()
         {
