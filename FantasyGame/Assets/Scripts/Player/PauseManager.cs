@@ -193,6 +193,25 @@ namespace GreatArcStudios
                 TitleTexts.SetActive(false);
                 mask.SetActive(false);
             }
+
+            if(CrossPlatformInputManager.GetButtonDown("Interact"))
+            {
+                ProcessMenuSelection();
+            }
+
+            print(uiEventSystem.currentSelectedGameObject.name);
+        }
+
+        private void ProcessMenuSelection()
+        {
+            string selectedButton = uiEventSystem.currentSelectedGameObject.name;
+            if (selectedButton == "Resume")
+            {
+                Resume();
+            } else if (selectedButton == "Quit")
+            {
+                quitGame();
+            }
         }
 
     }

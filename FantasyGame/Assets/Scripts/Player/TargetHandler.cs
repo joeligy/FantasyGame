@@ -69,6 +69,9 @@ public class TargetHandler : MonoBehaviour
         GameObject targetObject = hit.collider.gameObject;
         bool isDoor = targetObject.GetComponent<Door>();
 
+        //We use GetButtonUp here instead of GetButtonDown because something bad happens if you use the latter.
+        //Something about loading the new scene while the button is down messes things up.
+        //And when you load the new scene, that button doesn't work the first time you try to use it.
         if (CrossPlatformInputManager.GetButtonUp("Interact")) {
             if(isDoor)
             {
