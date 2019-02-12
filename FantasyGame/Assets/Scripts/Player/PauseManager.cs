@@ -198,8 +198,6 @@ namespace GreatArcStudios
             {
                 ProcessMenuSelection();
             }
-
-            print(uiEventSystem.currentSelectedGameObject.name);
         }
 
         private void ProcessMenuSelection()
