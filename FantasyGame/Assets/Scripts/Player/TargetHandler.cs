@@ -27,8 +27,17 @@ public class TargetHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (CrossPlatformInputManager.GetButtonDown("Interact"))
+        {
+            print("Pressed Interact!");
+        }
+        if (CrossPlatformInputManager.GetButtonDown("Jump"))
+        {
+            print("Pressed Jump!");
+        }
+
         RaycastHit hit;
-        Ray ray = GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        Ray ray = GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         if (Physics.Raycast(ray, out hit))
         {
             UpdateTargetCursorIcon(hit);
