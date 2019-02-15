@@ -28650,6 +28650,7 @@ GameObject:
   - component: {fileID: 2037938793}
   - component: {fileID: 2037938792}
   - component: {fileID: 2037938791}
+  - component: {fileID: 1835465358}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -28729,6 +28730,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2283254, y: 1.6366452, z: 3.0549858}
   m_Center: {x: -0.00000040978196, y: 0.7840856, z: 0.00000023841852}
+--- !u!114 &1835465358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037938789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e90782c8f385411295ad6aec5412434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Rijks Glorious Bay
+  spawnPointName: Van Graaf's House
 --- !u!1 &2039460083
 GameObject:
   m_ObjectHideFlags: 0
@@ -29948,18 +29963,6 @@ PrefabInstance:
       objectReference: {fileID: 23713476752292886}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 083fa7a3c2402ca48bf5c3fe8037d3c9, type: 3}
---- !u!23 &23237923672801520 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23237923744865840, guid: 083fa7a3c2402ca48bf5c3fe8037d3c9,
-    type: 3}
-  m_PrefabInstance: {fileID: 133471936}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &23713476752292886 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 23713476677542614, guid: 083fa7a3c2402ca48bf5c3fe8037d3c9,
-    type: 3}
-  m_PrefabInstance: {fileID: 133471936}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4058361500109712 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4058361513448784, guid: 083fa7a3c2402ca48bf5c3fe8037d3c9,
@@ -29969,6 +29972,18 @@ Transform:
 --- !u!23 &23251854618904998 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 23251854521096038, guid: 083fa7a3c2402ca48bf5c3fe8037d3c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 133471936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &23713476752292886 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23713476677542614, guid: 083fa7a3c2402ca48bf5c3fe8037d3c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 133471936}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &23237923672801520 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23237923744865840, guid: 083fa7a3c2402ca48bf5c3fe8037d3c9,
     type: 3}
   m_PrefabInstance: {fileID: 133471936}
   m_PrefabAsset: {fileID: 0}

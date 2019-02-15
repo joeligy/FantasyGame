@@ -10,6 +10,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
+
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -198,7 +199,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             GameObject playerSpawnPoints = GameObject.Find("Player Spawn Points");
             if (!playerSpawnPoints) return null;
 
-            string playerSpawnPointName = FindObjectOfType<PlayerSpawnManager>().spawnPoint;
+            PlayerSpawnManager playerSpawnManager = FindObjectOfType<PlayerSpawnManager>();
+            string playerSpawnPointName = playerSpawnManager.spawnPoint;
             if (playerSpawnPointName.Length == 0) return null;
 
             Transform selectedSpawnPoint = playerSpawnPoints.transform.Find(playerSpawnPointName);

@@ -103,13 +103,6 @@ namespace GreatArcStudios
             //saveSettings.LoadGameSettings(File.ReadAllText(Application.persistentDataPath + "/" + saveSettings.fileName));
         }
 
-        IEnumerator SelectInitialMenuOption()
-        {
-            yield return null;
-            uiEventSystem.SetSelectedGameObject(null);
-            uiEventSystem.SetSelectedGameObject(defaultSelectedMain);
-        }
-
         /// <summary>
         /// Method to resume the game, so disable the pause menu and re-enable all other ui elements
         /// </summary>
@@ -169,11 +162,6 @@ namespace GreatArcStudios
             if (mainPanel.active == true)
             {
                 pauseMenu.text = "Options";
-
-                if(uiEventSystem.currentSelectedGameObject == null)
-                {
-                    StartCoroutine(SelectInitialMenuOption());
-                }
             }
 
             if (pauseMenuActive == true && CrossPlatformInputManager.GetButtonDown("Interact"))
@@ -183,7 +171,10 @@ namespace GreatArcStudios
 
             if (CrossPlatformInputManager.GetButtonDown("Pause") && pauseMenuActive == false)
             {
-                uiEventSystem.SetSelectedGameObject(defaultSelectedMain);
+                //Has to be in a coroutine because of a Unity bug.
+                //If you don't skip the initial frame where the menu is rendered, the selected button won't highlight.
+                StartCoroutine(SetInitialMenuOption());
+
                 Time.timeScale = 0;
 
                 pauseMenuActive = true;
@@ -200,6 +191,13 @@ namespace GreatArcStudios
                 TitleTexts.SetActive(false);
                 mask.SetActive(false);
             }
+        }
+
+        IEnumerator SetInitialMenuOption()
+        {
+            uiEventSystem.SetSelectedGameObject(null);
+            yield return null;
+            uiEventSystem.SetSelectedGameObject(defaultSelectedMain);
         }
 
         private void ProcessMenuSelection()

@@ -840,7 +840,7 @@ GameObject:
   - component: {fileID: 11494052}
   - component: {fileID: 11463892}
   m_Layer: 5
-  m_Name: Resume/Return
+  m_Name: Resume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2028,9 +2028,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.13
-  m_Text: 'Quit
-
-'
+  m_Text: Save & Quit
 --- !u!1 &186966
 GameObject:
   m_ObjectHideFlags: 0

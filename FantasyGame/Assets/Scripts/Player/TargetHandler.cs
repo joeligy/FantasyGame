@@ -89,6 +89,7 @@ public class TargetHandler : MonoBehaviour
             if(isDoor)
             {
                 SaveSpawnPoint(targetObject);
+                PlayerSpawnManager playerSpawnManager = FindObjectOfType<PlayerSpawnManager>();
                 LoadScene(targetObject);
             }
         }
