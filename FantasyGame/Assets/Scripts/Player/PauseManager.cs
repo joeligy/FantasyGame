@@ -91,8 +91,7 @@ namespace GreatArcStudios
         {
             pauseMenuActive = false;
             mainCamShared = mainCam;
-            uiEventSystem.firstSelectedGameObject = defaultSelectedMain;
-  
+
             //enable titles
             TitleTexts.SetActive(true);
 
@@ -104,13 +103,11 @@ namespace GreatArcStudios
             //saveSettings.LoadGameSettings(File.ReadAllText(Application.persistentDataPath + "/" + saveSettings.fileName));
         }
 
-        /// <summary>
-        /// Restart the level by loading the loaded level.
-        /// </summary>
-        public void Restart()
+        IEnumerator SelectInitialMenuOption()
         {
-            Application.LoadLevel(Application.loadedLevel);
-            uiEventSystem.firstSelectedGameObject = defaultSelectedMain;
+            yield return null;
+            uiEventSystem.SetSelectedGameObject(null);
+            uiEventSystem.SetSelectedGameObject(defaultSelectedMain);
         }
 
         /// <summary>
@@ -172,6 +169,16 @@ namespace GreatArcStudios
             if (mainPanel.active == true)
             {
                 pauseMenu.text = "Options";
+
+                if(uiEventSystem.currentSelectedGameObject == null)
+                {
+                    StartCoroutine(SelectInitialMenuOption());
+                }
+            }
+
+            if (pauseMenuActive == true && CrossPlatformInputManager.GetButtonDown("Interact"))
+            {
+                ProcessMenuSelection();
             }
 
             if (CrossPlatformInputManager.GetButtonDown("Pause") && pauseMenuActive == false)
@@ -192,11 +199,6 @@ namespace GreatArcStudios
 
                 TitleTexts.SetActive(false);
                 mask.SetActive(false);
-            }
-
-            if(CrossPlatformInputManager.GetButtonDown("Interact"))
-            {
-                ProcessMenuSelection();
             }
         }
 

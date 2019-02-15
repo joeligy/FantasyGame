@@ -9,6 +9,8 @@ using System;
 public class TargetHandler : MonoBehaviour
 {
 
+    [SerializeField] Target targetCursor;
+
     //Swap curser per target type
     public Texture2D pointer; //Normal pointer
     public Texture2D target; //Cursor for clickable objects
@@ -41,27 +43,38 @@ public class TargetHandler : MonoBehaviour
 
     private void UpdateTargetCursorIcon(RaycastHit hit)
     {
+        if (PauseMenuEnabled())
+        {
+            targetCursor.gameObject.SetActive(false);
+        }
+        else
+        {
+            targetCursor.gameObject.SetActive(true);
+        }
+
         GameObject targetObject = hit.collider.gameObject;
         bool isDoor = targetObject.GetComponent<Door>();
-
         if (isDoor && hit.distance < maxInteractionDistance)
         {
-            Target targetCursor = FindObjectOfType<Target>();
             targetCursor.GetComponent<RawImage>().texture = door;
             targetCursor.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
         }
         else if(hit.collider.gameObject.tag == "NPC" && hit.distance < maxInteractionDistance)
         {
-            Target targetCursor = FindObjectOfType<Target>();
             targetCursor.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
             targetCursor.GetComponent<RawImage>().texture = target;
         }
         else
         {
-            Target targetCursor = FindObjectOfType<Target>();
             targetCursor.GetComponent<RectTransform>().sizeDelta = new Vector2(5, 5);
             targetCursor.GetComponent<RawImage>().texture = pointer;
         }
+    }
+
+    private bool PauseMenuEnabled()
+    {
+        GreatArcStudios.PauseManager pauseManager = FindObjectOfType<GreatArcStudios.PauseManager>();
+        return pauseManager.pauseMenuActive;
     }
 
     private void HandleInteraction(RaycastHit hit)
