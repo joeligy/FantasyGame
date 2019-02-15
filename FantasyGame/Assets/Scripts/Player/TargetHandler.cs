@@ -31,19 +31,21 @@ public class TargetHandler : MonoBehaviour
     {
         RaycastHit hit;
         Ray ray = GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+
         if (Physics.Raycast(ray, out hit))
         {
-            UpdateTargetCursorIcon(hit);
-            if(hit.distance < maxInteractionDistance)
+            EnableOrDisableTargetCursor();
+            SetTargetCursorImage(hit);
+            if (hit.distance < maxInteractionDistance)
             {
                 HandleInteraction(hit);
             }
         }
     }
 
-    private void UpdateTargetCursorIcon(RaycastHit hit)
+    private void EnableOrDisableTargetCursor()
     {
-        if (PauseMenuEnabled())
+        if (PauseMenuEnabled() || ConversationActive())
         {
             targetCursor.gameObject.SetActive(false);
         }
@@ -51,7 +53,10 @@ public class TargetHandler : MonoBehaviour
         {
             targetCursor.gameObject.SetActive(true);
         }
+    }
 
+    private void SetTargetCursorImage(RaycastHit hit)
+    {
         GameObject targetObject = hit.collider.gameObject;
         bool isDoor = targetObject.GetComponent<Door>();
         if (isDoor && hit.distance < maxInteractionDistance)
@@ -59,7 +64,7 @@ public class TargetHandler : MonoBehaviour
             targetCursor.GetComponent<RawImage>().texture = door;
             targetCursor.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
         }
-        else if(hit.collider.gameObject.tag == "NPC" && hit.distance < maxInteractionDistance)
+        else if (hit.collider.gameObject.tag == "NPC" && hit.distance < maxInteractionDistance)
         {
             targetCursor.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
             targetCursor.GetComponent<RawImage>().texture = target;
@@ -75,6 +80,12 @@ public class TargetHandler : MonoBehaviour
     {
         GreatArcStudios.PauseManager pauseManager = FindObjectOfType<GreatArcStudios.PauseManager>();
         return pauseManager.pauseMenuActive;
+    }
+
+    private bool ConversationActive()
+    {
+        PixelCrushers.DialogueSystem.DialogueSystemController controller = FindObjectOfType<PixelCrushers.DialogueSystem.DialogueSystemController>();
+        return controller.isConversationActive;
     }
 
     private void HandleInteraction(RaycastHit hit)
