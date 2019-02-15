@@ -69,17 +69,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            //if (PauseMenuEnabled() || ConversationActive())
-            //{
-            //    m_MouseLook.lockCursor = false;
-            //    m_MouseLook.SetCursorLock(false);
-            //    return;
-            //}
-            //else
-            //{
-            //    m_MouseLook.lockCursor = true;
-            //    m_MouseLook.SetCursorLock(true);
-            //}
+            //Don't move if a conversation is active!
+            if (ConversationActive()) return;
 
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -124,10 +115,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
        
         private void FixedUpdate()
         {
+            //Don't move if a conversation is active!
+            if (ConversationActive()) return;
+
             //In the first call to fixed update, set the initial position of the FirstPersonController in the scene and return.
             //This is kind of weird and janky, but for some reason putting the position initialization in the Start or Awake functions doesn't work.
             //It has something to do with CharacterController and the .Move function.
-            if(!loadedInitialPosition)
+            if (!loadedInitialPosition)
             {
                 SetPositionToSpawnPoint();
                 loadedInitialPosition = true;
