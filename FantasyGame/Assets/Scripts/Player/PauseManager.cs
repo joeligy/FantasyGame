@@ -169,7 +169,7 @@ namespace GreatArcStudios
                 ProcessMenuSelection();
             }
 
-            if (CrossPlatformInputManager.GetButtonDown("Pause") && pauseMenuActive == false)
+            if (CrossPlatformInputManager.GetButtonDown("Pause") && pauseMenuActive == false && !ConversationActive())
             {
                 //Has to be in a coroutine because of a Unity bug.
                 //If you don't skip the initial frame where the menu is rendered, the selected button won't highlight.
@@ -191,6 +191,12 @@ namespace GreatArcStudios
                 TitleTexts.SetActive(false);
                 mask.SetActive(false);
             }
+        }
+
+        private bool ConversationActive()
+        {
+            PixelCrushers.DialogueSystem.DialogueSystemController controller = FindObjectOfType<PixelCrushers.DialogueSystem.DialogueSystemController>();
+            return controller.isConversationActive;
         }
 
         IEnumerator SetInitialMenuOption()
