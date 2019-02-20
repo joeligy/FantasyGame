@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: targetCursor
       value: 
       objectReference: {fileID: 1838403453}
+    - target: {fileID: 110613049, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: selectorUIHeader
+      value: 
+      objectReference: {fileID: 1838403454}
     - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: playerSpawnManager
       value: 
@@ -660,5 +664,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c02419d7a449497282350bfe02a780f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1838403454 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 479591074, guid: 861b75cfe59c43d45bdc2d2a2b73b221,
+    type: 3}
+  m_PrefabInstance: {fileID: 1838403452}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552799c6e411c464fbaf29a6a02361fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

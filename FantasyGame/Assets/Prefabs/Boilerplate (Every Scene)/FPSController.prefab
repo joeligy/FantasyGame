@@ -409,6 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCursor: {fileID: 0}
+  selectorUIHeader: {fileID: 0}
   pointer: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
   target: {fileID: 2800000, guid: ef7fc647bfbb04ab783c666174af22ce, type: 3}
   door: {fileID: 2800000, guid: 5f1e9eba2c9e84398bca76961ec12554, type: 3}

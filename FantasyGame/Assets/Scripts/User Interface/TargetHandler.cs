@@ -62,13 +62,12 @@ public class TargetHandler : MonoBehaviour
     private void SetTargetCursorImage(RaycastHit hit)
     {
         GameObject targetObject = hit.collider.gameObject;
-        bool isDoor = targetObject.GetComponent<Door>();
-        if (isDoor && hit.distance < maxInteractionDistance)
+        if (targetObject.GetComponent<Door>() && hit.distance < maxInteractionDistance)
         {
             targetCursor.GetComponent<RawImage>().texture = door;
             targetCursor.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
         }
-        else if (targetObject.tag == "NPC" && hit.distance < maxInteractionDistance)
+        else if (targetObject.GetComponent<NPC>() && hit.distance < maxInteractionDistance)
         {
             targetCursor.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
             targetCursor.GetComponent<RawImage>().texture = target;
@@ -86,16 +85,22 @@ public class TargetHandler : MonoBehaviour
         GameObject targetObject = hit.collider.gameObject;
         selectorUIHeader.gameObject.SetActive(true);
 
-        bool isDoor = targetObject.GetComponent<Door>();
-        if (isDoor && hit.distance < maxInteractionDistance)
+        if (targetObject.GetComponent<Door>() && hit.distance < maxInteractionDistance)
         {
-            selectorTextComponent.text = targetObject.GetComponent<Door>().GetSpawnPointName();
+            Door doorInfo = targetObject.GetComponent<Door>();
+            string sceneName = doorInfo.GetSceneName();
+            selectorTextComponent.text = sceneName;
         }
-        else if (targetObject.tag == "NPC" && hit.distance < maxInteractionDistance)
+        else if (targetObject.GetComponent<NPC>() && hit.distance < maxInteractionDistance)
         {
             selectorTextComponent.text = targetObject.name;
         }
         else
+        {
+            selectorUIHeader.gameObject.SetActive(false);
+        }
+
+        if(PauseMenuEnabled() || ConversationActive())
         {
             selectorUIHeader.gameObject.SetActive(false);
         }
