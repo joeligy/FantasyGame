@@ -1,0 +1,5 @@
+Not all of the files are in the original download from the Asset Store.  Due to the file size (4k textures, multiple sets, etc), I've had to remove some of the files from the main package.  You can download those right now at http://www.InfinityPBR.com
+
+Use the order ID from the email Unity sent you when you purchased the package, and use that to register on my site.  You'll have instant access to the downloads.
+
+Thanks, and sorry for the inconvenience!  Hopefully the quality of the files is worth it :)
