@@ -302,8 +302,8 @@ GameObject:
   - component: {fileID: 8100000}
   - component: {fileID: 12474086}
   - component: {fileID: 1332971382}
-  - component: {fileID: 110613049}
   - component: {fileID: 592452777}
+  - component: {fileID: 1702197348}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -396,24 +396,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: c1a5c2988061dab458b5c9dc3ec0ca16, type: 2}
---- !u!114 &110613049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ca4782074cd94430bbf9241f7d533c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetCursor: {fileID: 0}
-  selectorUIHeader: {fileID: 0}
-  pointer: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
-  target: {fileID: 2800000, guid: ef7fc647bfbb04ab783c666174af22ce, type: 3}
-  door: {fileID: 2800000, guid: 5f1e9eba2c9e84398bca76961ec12554, type: 3}
-  combat: {fileID: 2800000, guid: e432fc779185b4c71a9276981273659a, type: 3}
 --- !u!114 &592452777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,3 +451,21 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   debug: 0
+--- !u!114 &1702197348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 181a646b88e614eebb5003b27b02325e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCursor: {fileID: 0}
+  selectorUIHeader: {fileID: 0}
+  pointer: {fileID: 2800000, guid: e724a382091604161b09c045533c3be1, type: 3}
+  target: {fileID: 2800000, guid: ef7fc647bfbb04ab783c666174af22ce, type: 3}
+  door: {fileID: 2800000, guid: 5f1e9eba2c9e84398bca76961ec12554, type: 3}
+  combat: {fileID: 0}

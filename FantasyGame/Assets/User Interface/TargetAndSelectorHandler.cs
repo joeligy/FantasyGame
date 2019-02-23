@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.SceneManagement;
 using System;
 
-public class TargetHandler : MonoBehaviour
+public class TargetAndSelectorHandler : MonoBehaviour
 {
 
     [SerializeField] Target targetCursor;
