@@ -69,6 +69,7 @@ public class TargetAndSelectorHandler : MonoBehaviour
         }
         else if (targetObject.GetComponent<NPC>() && hit.distance < maxInteractionDistance)
         {
+            print("Hit NPC!");
             targetCursor.GetComponent<RectTransform>().sizeDelta = new Vector2(20, 20);
             targetCursor.GetComponent<RawImage>().texture = target;
         }
