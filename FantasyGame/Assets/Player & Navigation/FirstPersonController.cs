@@ -51,6 +51,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //Set rotation to the spawn point rotation before initializing the camera.
             //Setting the position to the spawn point happens in the first called to "FixedUpdate".
             SetRotationToSpawnPoint();
+            SetPositionToSpawnPoint();
             loadedInitialPosition = false;
 
             m_CharacterController = GetComponent<CharacterController>();
@@ -121,6 +122,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //In the first call to fixed update, set the initial position of the FirstPersonController in the scene and return.
             //This is kind of weird and janky, but for some reason putting the position initialization in the Start or Awake functions doesn't work.
             //It has something to do with CharacterController and the .Move function.
+            //print(transform.position);
             if (!loadedInitialPosition)
             {
                 SetPositionToSpawnPoint();
