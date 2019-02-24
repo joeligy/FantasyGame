@@ -154,7 +154,6 @@ public class TargetAndSelectorHandler : MonoBehaviour
         string doorSceneName = doorInfo.GetSceneName();
         if (doorSceneName != null)
         {
-            print(FindObjectOfType<PlayerSpawnManager>().spawnPoint);
             SceneManager.LoadScene(doorSceneName);
         }
     }

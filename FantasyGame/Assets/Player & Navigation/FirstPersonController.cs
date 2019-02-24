@@ -122,7 +122,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //In the first call to fixed update, set the initial position of the FirstPersonController in the scene and return.
             //This is kind of weird and janky, but for some reason putting the position initialization in the Start or Awake functions doesn't work.
             //It has something to do with CharacterController and the .Move function.
-            //print(transform.position);
             if (!loadedInitialPosition)
             {
                 SetPositionToSpawnPoint();
