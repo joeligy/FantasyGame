@@ -121,17 +121,26 @@ public class TargetAndSelectorHandler : MonoBehaviour
     private void HandleInteraction(RaycastHit hit)
     {
         GameObject targetObject = hit.collider.gameObject;
-        bool isDoor = targetObject.GetComponent<Door>();
 
         //We use GetButtonUp here instead of GetButtonDown because something bad happens if you use the latter.
         //Something about loading the new scene while the button is down messes things up.
         //And when you load the new scene, that button doesn't work the first time you try to use it.
         if (CrossPlatformInputManager.GetButtonUp("Interact")) {
-            if(isDoor)
+
+            //If we select a door, load the next scene (including spawn point setup).
+            if(targetObject.GetComponent<Door>())
             {
                 SaveSpawnPoint(targetObject);
                 LoadScene(targetObject);
             }
+
+            //If we select an NPC, the NPC should turn towards the camera.
+            //We don't need to start the dialogue system here, because that is handled in the PixelCrushers package automatically.
+            if(targetObject.GetComponent<NPC>())
+            {
+                targetObject.GetComponent<NPC>().TurnToPlayer();
+            }
+
         }
     }
 
