@@ -127,6 +127,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 loadedInitialPosition = true;
                 return;
             }
+            GetSpawnPoint();
 
             RotateView();
             transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
@@ -193,7 +194,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             GameObject playerSpawnPoints = GameObject.Find("Player Spawn Points");
             if (!playerSpawnPoints) return null;
 
-            PlayerSpawnManager playerSpawnManager = FindObjectOfType<PlayerSpawnManager>();
+            PlayerSpawnManager playerSpawnManager = GetSpawnManager();
+            if (!playerSpawnManager) return null;
+
             string playerSpawnPointName = playerSpawnManager.spawnPoint;
             if (playerSpawnPointName.Length == 0) return null;
 
@@ -201,6 +204,19 @@ namespace UnityStandardAssets.Characters.FirstPerson
             return selectedSpawnPoint;
         }
 
+        // Weird pattern here - there should only ever be one player spawn manager.
+        // But that assumption is bad because for the first frame of the new scene there are two managers before the new one destroys itself.
+        // So we look at all the spawn managers and find the one populated with data.
+        private PlayerSpawnManager GetSpawnManager()
+        {
+            PlayerSpawnManager[] spawnManagers = FindObjectsOfType<PlayerSpawnManager>();
+            foreach (PlayerSpawnManager spawnManager in spawnManagers)
+            {
+                if (spawnManager.spawnPoint.Length > 0) return spawnManager;
+            }
+
+            return spawnManagers[0];
+        }
 
         private void PlayJumpSound()
         {

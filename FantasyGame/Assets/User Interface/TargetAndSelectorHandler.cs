@@ -131,7 +131,6 @@ public class TargetAndSelectorHandler : MonoBehaviour
             if(isDoor)
             {
                 SaveSpawnPoint(targetObject);
-                PlayerSpawnManager playerSpawnManager = FindObjectOfType<PlayerSpawnManager>();
                 LoadScene(targetObject);
             }
         }
@@ -155,6 +154,7 @@ public class TargetAndSelectorHandler : MonoBehaviour
         string doorSceneName = doorInfo.GetSceneName();
         if (doorSceneName != null)
         {
+            print(FindObjectOfType<PlayerSpawnManager>().spawnPoint);
             SceneManager.LoadScene(doorSceneName);
         }
     }
