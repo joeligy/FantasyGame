@@ -296,12 +296,15 @@ namespace PixelCrushers.DialogueSystem
             SetStateToggleButtons();
             mainPanel.RefreshSelectablesList();
             if (mainPanel != null) UnityEngine.UI.LayoutRebuilder.MarkLayoutForRebuild(mainPanel.GetComponent<RectTransform>());
+            print(mainPanel);
+            print(mainPanel.firstSelected);
             if (elementToSelect != null)
             {
                 StartCoroutine(SelectElement(elementToSelect));
             }
             else if (UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject == null && mainPanel != null && mainPanel.firstSelected != null && InputDeviceManager.autoFocus)
             {
+                print("Getting Here");
                 UITools.Select(mainPanel.firstSelected.GetComponent<UnityEngine.UI.Selectable>());
             }
         }
