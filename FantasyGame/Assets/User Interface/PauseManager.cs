@@ -159,6 +159,7 @@ namespace GreatArcStudios
         /// </summary>
         public void Update()
         {
+            QuestLogOpen();
             if (mainPanel.active == true)
             {
                 pauseMenu.text = "Options";
@@ -169,7 +170,7 @@ namespace GreatArcStudios
                 ProcessMenuSelection();
             }
 
-            if (CrossPlatformInputManager.GetButtonDown("Pause") && pauseMenuActive == false && !ConversationActive())
+            if (CrossPlatformInputManager.GetButtonDown("Pause") && pauseMenuActive == false && !ConversationActive() && !QuestLogOpen())
             {
                 //Has to be in a coroutine because of a Unity bug.
                 //If you don't skip the initial frame where the menu is rendered, the selected button won't highlight.
@@ -197,6 +198,19 @@ namespace GreatArcStudios
         {
             PixelCrushers.DialogueSystem.DialogueSystemController controller = FindObjectOfType<PixelCrushers.DialogueSystem.DialogueSystemController>();
             return controller.isConversationActive;
+        }
+
+        private bool QuestLogOpen()
+        {
+            PixelCrushers.DialogueSystem.QuestLogWindow[] questLogWindows = FindObjectsOfType<PixelCrushers.DialogueSystem.QuestLogWindow>();
+            foreach (PixelCrushers.DialogueSystem.QuestLogWindow window in questLogWindows)
+            {
+                if (window.isOpen)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         IEnumerator SetInitialMenuOption()
