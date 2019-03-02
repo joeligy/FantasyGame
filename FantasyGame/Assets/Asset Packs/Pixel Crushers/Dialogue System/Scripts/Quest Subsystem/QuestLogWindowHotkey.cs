@@ -37,12 +37,27 @@ namespace PixelCrushers.DialogueSystem
 
         void Update()
         {
+
+            if (PauseMenuActive() || ConversationActive()) return;
             if (runtimeQuestLogWindow == null) return;
             if (DialogueManager.IsDialogueSystemInputDisabled()) return;
+
             if (Input.GetKeyDown(key) || (!string.IsNullOrEmpty(buttonName) && DialogueManager.getInputButtonDown(buttonName)))
             {
                 if (runtimeQuestLogWindow.isOpen) runtimeQuestLogWindow.Close(); else runtimeQuestLogWindow.Open();
             }
+        }
+
+        private bool ConversationActive()
+        {
+            PixelCrushers.DialogueSystem.DialogueSystemController controller = FindObjectOfType<PixelCrushers.DialogueSystem.DialogueSystemController>();
+            return controller.isConversationActive;
+        }
+
+        private bool PauseMenuActive()
+        {
+            GreatArcStudios.PauseManager pauseMenu = FindObjectOfType<GreatArcStudios.PauseManager>();
+            return pauseMenu.pauseMenuActive;
         }
 
     }
