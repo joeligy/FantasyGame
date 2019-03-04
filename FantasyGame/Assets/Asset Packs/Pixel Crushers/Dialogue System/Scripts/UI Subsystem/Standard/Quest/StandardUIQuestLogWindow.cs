@@ -323,7 +323,10 @@ namespace PixelCrushers.DialogueSystem
             yield return null;
 
             var currentSelectedQuestInEventSystem = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
-            SelectQuest(currentSelectedQuestInEventSystem.name);
+            if (currentSelectedQuestInEventSystem != null)
+            {
+                SelectQuest(currentSelectedQuestInEventSystem.name);
+            }
         }
 
         protected virtual void AddShowDetailsOnSelect(UnityEngine.UI.Button button, string target)
@@ -351,7 +354,6 @@ namespace PixelCrushers.DialogueSystem
 
         protected virtual void ShowDetailsOnSelect(string questTitle)
         {
-            print(questTitle);
             if (!string.Equals(selectedQuest, questTitle)) SelectQuest(questTitle);
         }
 
@@ -362,7 +364,6 @@ namespace PixelCrushers.DialogueSystem
 
         public virtual void SelectQuest(string questTitle)
         {
-            print(questTitle);
             questTitleToSelect = questTitle;
             ClickQuest(questTitle);
         }
