@@ -405,7 +405,7 @@ namespace PixelCrushers.DialogueSystem
         {
             if (!IsString(data)) return;
             string clickedQuest = (string)data;
-            selectedQuest = string.Equals(selectedQuest, clickedQuest) ? string.Empty : clickedQuest;
+            selectedQuest = clickedQuest;
             OnQuestListUpdated();
         }
 

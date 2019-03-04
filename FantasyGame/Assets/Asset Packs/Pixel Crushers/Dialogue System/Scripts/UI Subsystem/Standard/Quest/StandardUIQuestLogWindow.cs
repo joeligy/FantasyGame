@@ -296,16 +296,19 @@ namespace PixelCrushers.DialogueSystem
             SetStateToggleButtons();
             mainPanel.RefreshSelectablesList();
             if (mainPanel != null) UnityEngine.UI.LayoutRebuilder.MarkLayoutForRebuild(mainPanel.GetComponent<RectTransform>());
-            print(mainPanel);
-            print(mainPanel.firstSelected);
             if (elementToSelect != null)
             {
                 StartCoroutine(SelectElement(elementToSelect));
             }
             else if (UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject == null && mainPanel != null && mainPanel.firstSelected != null && InputDeviceManager.autoFocus)
             {
-                print("Getting Here");
                 UITools.Select(mainPanel.firstSelected.GetComponent<UnityEngine.UI.Selectable>());
+            }
+
+            //Select first quest in menu on opening.
+            GameObject selectedButton = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+            if (selectedButton == null && mainPanel != null && InputDeviceManager.autoFocus) {
+                StartCoroutine(SelectFirstQuestOnWindowOpen());
             }
         }
 
@@ -313,6 +316,14 @@ namespace PixelCrushers.DialogueSystem
         {
             yield return null;
             UITools.Select(elementToSelect);
+        }
+
+        protected IEnumerator SelectFirstQuestOnWindowOpen()
+        {
+            yield return null;
+
+            var currentSelectedQuestInEventSystem = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
+            SelectQuest(currentSelectedQuestInEventSystem.name);
         }
 
         protected virtual void AddShowDetailsOnSelect(UnityEngine.UI.Button button, string target)
@@ -340,6 +351,7 @@ namespace PixelCrushers.DialogueSystem
 
         protected virtual void ShowDetailsOnSelect(string questTitle)
         {
+            print(questTitle);
             if (!string.Equals(selectedQuest, questTitle)) SelectQuest(questTitle);
         }
 
@@ -350,6 +362,7 @@ namespace PixelCrushers.DialogueSystem
 
         public virtual void SelectQuest(string questTitle)
         {
+            print(questTitle);
             questTitleToSelect = questTitle;
             ClickQuest(questTitle);
         }
