@@ -67,16 +67,16 @@ public class AnimationEventCopier : EditorWindow
 				CopyAllData (sourceGameObject, targetGameObject);
 			}
 			EditorGUILayout.HelpBox ("Source Clip Count: " + AnimationUtility.GetAnimationClips (sourceGameObject).Length + "\n\n" +
-				"Target Clip Count " + targetGameObject.name + " : " + AnimationUtility.GetAnimationClips (targetGameObject).Length, MessageType.Info);
+				"Target Clip Count: " + AnimationUtility.GetAnimationClips (targetGameObject).Length, MessageType.Info);
 
-			 //Uncoment this section if you'd like to see a list of each Clip with the number of events on it.  Good for debugging
+			/* Uncoment this section if you'd like to see a list of each Clip with the number of events on it.  Good for debugging
 			for (int i = 0; i < AnimationUtility.GetAnimationClips (sourceGameObject).Length; i++) {
 				EditorGUILayout.LabelField ("Source Clip " + AnimationUtility.GetAnimationClips (sourceGameObject) [i].name, AnimationUtility.GetAnimationEvents (AnimationUtility.GetAnimationClips (sourceGameObject) [i]).Length + " Events");
 			}
 			for (int i = 0; i < AnimationUtility.GetAnimationClips (targetGameObject).Length; i++) {
 				EditorGUILayout.LabelField ("Target Clip " + AnimationUtility.GetAnimationClips (targetGameObject) [i].name, AnimationUtility.GetAnimationEvents (AnimationUtility.GetAnimationClips (targetGameObject) [i]).Length + " Events");
 			}	
-
+			*/
 		}
 
 		EditorGUILayout.Space ();
@@ -148,9 +148,9 @@ public class AnimationEventCopier : EditorWindow
 	/// <param name="targetAnimClip">Target animation clip.</param>
 	void CopyData(AnimationClip sourceClip, AnimationClip targetClip)
 	{
-		//EraseEvent (targetClip);																							// Remove all events
+		EraseEvent (targetClip);																							// Remove all events
 		AnimationUtility.SetAnimationEvents(targetClip, AnimationUtility.GetAnimationEvents (sourceClip));					// Copy Events
-		//AnimationUtility.SetAnimationClipSettings(targetClip, AnimationUtility.GetAnimationClipSettings(sourceClip));		// Copy Clip Settings
+		AnimationUtility.SetAnimationClipSettings(targetClip, AnimationUtility.GetAnimationClipSettings(sourceClip));		// Copy Clip Settings
 		Debug.Log ("Copying " + AnimationUtility.GetAnimationEvents (sourceClip).Length + " event from " + sourceClip.name + " to " + targetClip.name + " (" + AnimationUtility.GetAnimationEvents (targetClip).Length + " events)");
 	}
 
