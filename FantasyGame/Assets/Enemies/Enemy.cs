@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float stoppingDistanceFromPlayer = 5f;
-
     NavMeshAgent nav;
     Player player;
 

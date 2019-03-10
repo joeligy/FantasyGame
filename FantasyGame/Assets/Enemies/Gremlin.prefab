@@ -1816,7 +1816,7 @@ Transform:
   m_GameObject: {fileID: 1146893524878820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8529, y: 1.8529, z: 1.8529}
   m_Children:
   - {fileID: 4173005077310144}
   - {fileID: 4027650795273710}
@@ -3846,10 +3846,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 1.1
+  m_Height: 1.91
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.75, z: 0.3}
 --- !u!195 &575224331
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3860,11 +3860,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 5
+  m_StoppingDistance: 7
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -3884,7 +3884,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58659d67fc2854fa9b264df7896de9aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoppingDistanceFromPlayer: 0
 --- !u!114 &46748287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3897,6 +3896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa566c56704a4052ba0ab039587568b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locomotionTargetSpeed: 0
+  maxLocomotionDelta: 0.2
 --- !u!1 &1153091745482540
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class LocomotionAgent : MonoBehaviour
     {
         CalculatVelocity();
         SetLocomotion();
-        //LookAtPlayerIfClose();
+        LookAtPlayerIfClose();
 
         //GetComponent<LookAt>().lookAtTargetPosition = agent.steeringTarget + transform.forward;
     }
@@ -71,7 +71,6 @@ public class LocomotionAgent : MonoBehaviour
     private void UpdateLocomotionTowardsTarget()
     {
         float currentLocomotionSpeed = anim.GetFloat("Locomotion");
-        print(currentLocomotionSpeed);
         if (Mathf.Abs(locomotionTargetSpeed - currentLocomotionSpeed) < maxLocomotionDelta)
         {
             anim.SetFloat("Locomotion", locomotionTargetSpeed);
@@ -96,6 +95,7 @@ public class LocomotionAgent : MonoBehaviour
         if (agent.remainingDistance < agent.stoppingDistance)
         {
             transform.LookAt(Camera.main.transform);
+            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         }
     }
 
