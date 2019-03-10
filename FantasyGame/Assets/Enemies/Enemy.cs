@@ -1,24 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.Characters.ThirdPerson;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] float stoppingDistanceFromPlayer = 5f;
 
-    AICharacterControl aiCharacterControl;
+    NavMeshAgent nav;
     Player player;
 
     // Start is called before the first frame update
     void Start()
     {
-        aiCharacterControl = GetComponent<AICharacterControl>();
+        nav = GetComponent<NavMeshAgent>();
         player = FindObjectOfType<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        aiCharacterControl.target = player.transform;
+        if (Vector3.Distance(transform.position, player.transform.position) > stoppingDistanceFromPlayer)
+        {
+            nav.destination = player.transform.position;
+        }
     }
 }
