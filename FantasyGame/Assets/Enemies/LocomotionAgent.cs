@@ -9,7 +9,11 @@ public class LocomotionAgent : MonoBehaviour
     Animator anim;
     NavMeshAgent agent;
     Vector2 smoothDeltaPosition = Vector2.zero;
+
     Vector2 velocity = Vector2.zero;
+    float locomotionTargetSpeed;
+
+    [SerializeField] float maxLocomotionDelta = .2f;
 
     void Start()
     {
@@ -19,6 +23,25 @@ public class LocomotionAgent : MonoBehaviour
     }
 
     void Update()
+    {
+        print(anim.GetFloat("Locomotion"));
+        CalculatVelocity();
+        SetLocomotion();
+        //LookAtPlayerIfClose();
+
+        //GetComponent<LookAt>().lookAtTargetPosition = agent.steeringTarget + transform.forward;
+    }
+
+    private void SetLocomotion()
+    {
+        SetTargetSpeed();
+
+        UpdateLocomotionTowardsTarget();
+
+        anim.SetFloat("Locomotion", velocity.magnitude);
+    }
+
+    private void CalculatVelocity()
     {
         Vector3 worldDeltaPosition = agent.nextPosition - transform.position;
 
@@ -34,20 +57,47 @@ public class LocomotionAgent : MonoBehaviour
         // Update velocity if time advances
         if (Time.deltaTime > 1e-5f)
             velocity = smoothDeltaPosition / Time.deltaTime;
+    }
 
-        bool shouldMove = velocity.magnitude > 0.5f && agent.remainingDistance > agent.radius;
-
-        print(velocity.magnitude);
-        if(shouldMove)
+    private void SetTargetSpeed()
+    {
+        bool shouldMove = velocity.magnitude > 0.5f && agent.remainingDistance > agent.stoppingDistance;
+        if (shouldMove)
         {
-            anim.SetFloat("Locomotion", velocity.magnitude);
+            locomotionTargetSpeed = velocity.magnitude;
         }
         else
         {
-            anim.SetFloat("Locomotion", 0);
+            locomotionTargetSpeed = 0f;
         }
+    }
 
-        //GetComponent<LookAt>().lookAtTargetPosition = agent.steeringTarget + transform.forward;
+    private void UpdateLocomotionTowardsTarget()
+    {
+        float currentLocomotionSpeed = anim.GetFloat("Locomotion");
+        if (Mathf.Abs(locomotionTargetSpeed - currentLocomotionSpeed) < maxLocomotionDelta)
+        {
+            anim.SetFloat("Locomotion", locomotionTargetSpeed);
+        }
+        else
+        {
+            if (locomotionTargetSpeed > currentLocomotionSpeed)
+            {
+                anim.SetFloat("Locomotion", currentLocomotionSpeed + maxLocomotionDelta);
+            }
+            else
+            {
+                anim.SetFloat("Locomotion", currentLocomotionSpeed - maxLocomotionDelta);
+            }
+        }
+    }
+
+    private void LookAtPlayerIfClose()
+    {
+        if (agent.remainingDistance < agent.stoppingDistance)
+        {
+            transform.LookAt(Camera.main.transform);
+        }
     }
 
     void OnAnimatorMove()

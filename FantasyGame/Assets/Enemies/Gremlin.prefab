@@ -1799,6 +1799,7 @@ GameObject:
   - component: {fileID: 575224329}
   - component: {fileID: 575224331}
   - component: {fileID: 575224324}
+  - component: {fileID: 46748287}
   m_Layer: 0
   m_Name: Gremlin
   m_TagString: Untagged
@@ -3863,7 +3864,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -3883,7 +3884,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58659d67fc2854fa9b264df7896de9aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoppingDistanceFromPlayer: 5
+  stoppingDistanceFromPlayer: 0
+--- !u!114 &46748287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146893524878820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa566c56704a4052ba0ab039587568b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1153091745482540
 GameObject:
   m_ObjectHideFlags: 0

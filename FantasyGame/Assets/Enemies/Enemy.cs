@@ -20,9 +20,6 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) > stoppingDistanceFromPlayer)
-        {
-            nav.destination = player.transform.position;
-        }
+        nav.destination = player.transform.position;
     }
 }
