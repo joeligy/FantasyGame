@@ -11,8 +11,8 @@ public class LocomotionAgent : MonoBehaviour
     Vector2 smoothDeltaPosition = Vector2.zero;
 
     Vector2 velocity = Vector2.zero;
-    float locomotionTargetSpeed;
 
+    [SerializeField] float locomotionTargetSpeed;
     [SerializeField] float maxLocomotionDelta = .2f;
 
     void Start()
@@ -24,7 +24,6 @@ public class LocomotionAgent : MonoBehaviour
 
     void Update()
     {
-        print(anim.GetFloat("Locomotion"));
         CalculatVelocity();
         SetLocomotion();
         //LookAtPlayerIfClose();
@@ -35,10 +34,7 @@ public class LocomotionAgent : MonoBehaviour
     private void SetLocomotion()
     {
         SetTargetSpeed();
-
         UpdateLocomotionTowardsTarget();
-
-        anim.SetFloat("Locomotion", velocity.magnitude);
     }
 
     private void CalculatVelocity()
@@ -75,20 +71,23 @@ public class LocomotionAgent : MonoBehaviour
     private void UpdateLocomotionTowardsTarget()
     {
         float currentLocomotionSpeed = anim.GetFloat("Locomotion");
+        print(currentLocomotionSpeed);
         if (Mathf.Abs(locomotionTargetSpeed - currentLocomotionSpeed) < maxLocomotionDelta)
         {
             anim.SetFloat("Locomotion", locomotionTargetSpeed);
         }
         else
         {
+            float newLocomotionSpeed;
             if (locomotionTargetSpeed > currentLocomotionSpeed)
             {
-                anim.SetFloat("Locomotion", currentLocomotionSpeed + maxLocomotionDelta);
+                newLocomotionSpeed = currentLocomotionSpeed + maxLocomotionDelta;
             }
             else
             {
-                anim.SetFloat("Locomotion", currentLocomotionSpeed - maxLocomotionDelta);
+                newLocomotionSpeed = currentLocomotionSpeed - maxLocomotionDelta;
             }
+            anim.SetFloat("Locomotion", newLocomotionSpeed);
         }
     }
 
