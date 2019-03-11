@@ -22,9 +22,16 @@ public class PlayerCombatManager : MonoBehaviour
     {
         if (CrossPlatformInputManager.GetButtonDown("Cast Spell"))
         {
-            Vector3 spellOriginationPoint = new Vector3(transform.position.x, transform.position.y + 0.3f, transform.position.z);
-            Rigidbody fireball = Instantiate(fireBallSpell, spellOriginationPoint, transform.rotation, transform);
-            fireball.velocity = transform.forward * fireBallSpeed;
+            CastFireBall();
         }
+    }
+
+    private void CastFireBall()
+    {
+        Vector3 spellOriginationPoint = new Vector3(transform.position.x, transform.position.y + 0.3f, transform.position.z);
+        Quaternion spellOriginationRotation = Quaternion.Euler(Camera.main.gameObject.transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
+        Rigidbody fireball = Instantiate(fireBallSpell, spellOriginationPoint, spellOriginationRotation);
+        print(fireball.transform.rotation.eulerAngles.y);
+        fireball.velocity = fireball.transform.forward * fireBallSpeed;
     }
 }
