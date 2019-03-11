@@ -1816,7 +1816,7 @@ Transform:
   m_GameObject: {fileID: 1146893524878820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.8529, y: 1.8529, z: 1.8529}
+  m_LocalScale: {x: 1.852901, y: 1.8529, z: 1.852901}
   m_Children:
   - {fileID: 4173005077310144}
   - {fileID: 4027650795273710}
@@ -3897,7 +3897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locomotionTargetSpeed: 0
-  maxLocomotionDelta: 0.2
+  maxLocomotionDelta: 0.3
 --- !u!1 &1153091745482540
 GameObject:
   m_ObjectHideFlags: 0
