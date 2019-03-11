@@ -591,7 +591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 940475130, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000011798535
+      value: -0.0000029690564
       objectReference: {fileID: 0}
     - target: {fileID: 940492842, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_SizeDelta.y
@@ -599,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 940492842, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000019717914
+      value: 0.0000033527613
       objectReference: {fileID: 0}
     - target: {fileID: 940518600, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1107,6 +1107,28 @@ Terrain:
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_AllowAutoConnect: 1
+--- !u!1 &396125739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1813238403}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &396125740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396125739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0b8b207d728488c9c27bef13ef97e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireBallSpell: {fileID: 52039385966490849, guid: a26d3a53c75fb40f69d6073c0ead2f0e,
+    type: 3}
+  fireBallSpeed: 10
+  health: 100
 --- !u!114 &479591074 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 479591074, guid: 861b75cfe59c43d45bdc2d2a2b73b221,
