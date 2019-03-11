@@ -112,8 +112,8 @@ MonoBehaviour:
       barkCharsPerSecond: 0
       minBarkSeconds: 0
     alertSettings:
-      allowAlertsDuringConversations: 0
-      alertCheckFrequency: 0
+      allowAlertsDuringConversations: 1
+      alertCheckFrequency: 1
       alertCharsPerSecond: 0
       minAlertSeconds: 0
   persistentDataSettings:
@@ -828,11 +828,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: fe20d4ed8c6f2411aa633f05950fe2bc, type: 3}
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1462,7 +1462,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586020000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -1594,7 +1594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &636519079
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1610,10 +1610,10 @@ RectTransform:
   m_Father: {fileID: 586020001}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 201.5, y: -20}
+  m_SizeDelta: {x: 73, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &636519084
 CanvasRenderer:
@@ -1972,10 +1972,10 @@ RectTransform:
   m_Father: {fileID: 636519079}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 36.5, y: -12}
+  m_SizeDelta: {x: 57, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &771120797
 CanvasRenderer:
@@ -3765,10 +3765,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Standard UI Quest Log Window
       objectReference: {fileID: 0}
-    - target: {fileID: 162630, guid: f40d1072f56eeb04f9c104b7c4a8811f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 22410808, guid: f40d1072f56eeb04f9c104b7c4a8811f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3901,6 +3897,10 @@ PrefabInstance:
       propertyPath: buttonName
       value: Quest Log
       objectReference: {fileID: 0}
+    - target: {fileID: 22451830, guid: f40d1072f56eeb04f9c104b7c4a8811f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000072652474
+      objectReference: {fileID: 0}
     - target: {fileID: 11462688, guid: f40d1072f56eeb04f9c104b7c4a8811f, type: 3}
       propertyPath: foldoutButton
       value: 
@@ -3937,6 +3937,10 @@ PrefabInstance:
       propertyPath: trackToggleTemplate
       value: 
       objectReference: {fileID: 972520602}
+    - target: {fileID: 22469798, guid: f40d1072f56eeb04f9c104b7c4a8811f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000005632735
+      objectReference: {fileID: 0}
     - target: {fileID: 11484122, guid: f40d1072f56eeb04f9c104b7c4a8811f, type: 3}
       propertyPath: m_text.m_uiText
       value: 
@@ -3963,11 +3967,11 @@ PrefabInstance:
       objectReference: {fileID: 972430048}
     - target: {fileID: 22405738, guid: f40d1072f56eeb04f9c104b7c4a8811f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 140.575
+      value: 177.075
       objectReference: {fileID: 0}
     - target: {fileID: 22405738, guid: f40d1072f56eeb04f9c104b7c4a8811f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 281.15
+      value: 354.15
       objectReference: {fileID: 0}
     - target: {fileID: 11454964, guid: f40d1072f56eeb04f9c104b7c4a8811f, type: 3}
       propertyPath: m_TargetGraphic

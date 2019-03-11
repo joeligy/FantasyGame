@@ -1197,6 +1197,7 @@ namespace PixelCrushers.DialogueSystem
             {
                 if (message.Contains("\\n")) message = message.Replace("\\n", "\n");
                 dialogueUI.ShowAlert(GetLocalizedText(message), duration);
+                PlayAlertAudio();
             }
         }
 
@@ -1254,6 +1255,12 @@ namespace PixelCrushers.DialogueSystem
                 yield return waitForSeconds;
                 CheckAlerts();
             }
+        }
+
+        private void PlayAlertAudio()
+        {
+            AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
         }
 
         public void HideAlert()
