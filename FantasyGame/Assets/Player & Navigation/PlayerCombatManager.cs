@@ -30,8 +30,7 @@ public class PlayerCombatManager : MonoBehaviour
     {
         Vector3 spellOriginationPoint = new Vector3(transform.position.x, transform.position.y + 0.3f, transform.position.z);
         Quaternion spellOriginationRotation = Quaternion.Euler(Camera.main.gameObject.transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, 0);
-        Rigidbody fireball = Instantiate(fireBallSpell, spellOriginationPoint, spellOriginationRotation);
-        print(fireball.transform.rotation.eulerAngles.y);
+        Rigidbody fireball = Instantiate(fireBallSpell, spellOriginationPoint, spellOriginationRotation, transform);
         fireball.velocity = fireball.transform.forward * fireBallSpeed;
     }
 }
