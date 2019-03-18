@@ -29,13 +29,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void Die()
-    {
-        isAlive = false;
-        nav.isStopped = true;
-        animator.SetTrigger("Death");
-    }
-
     void Start()
     {
         nav = GetComponent<NavMeshAgent>();
@@ -77,15 +70,25 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator GremlinAttack()
     {
+        nav.isStopped = true;
         yield return new WaitForSeconds(1f);
         if (PlayerInAttackRadius())
         {
             player.ReduceHealth(attackDamage);
         }
+        nav.isStopped = false;
     }
 
     private bool PlayerInAttackRadius()
     {
         return Vector3.Distance(player.transform.position, transform.position) < attackRadius;
+    }
+
+    void Die()
+    {
+        isAlive = false;
+        nav.isStopped = true;
+        animator.SetTrigger("Death");
+        GetComponent<AudioSource>().Play();
     }
 }
