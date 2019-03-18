@@ -36,6 +36,6 @@ public class FireBall : MonoBehaviour
     void Explode()
     {
         Instantiate(fireBallExplosion, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Destroy(gameObject, .25f);
     }
 }

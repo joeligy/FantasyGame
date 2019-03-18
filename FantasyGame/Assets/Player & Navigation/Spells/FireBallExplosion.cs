@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class FireBallExplosion : MonoBehaviour
 {
-
-    [SerializeField] float health = 100f;
-    [SerializeField] float magic = 100f;
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(gameObject, 5f);
     }
 
     // Update is called once per frame

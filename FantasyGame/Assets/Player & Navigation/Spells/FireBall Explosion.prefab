@@ -4741,6 +4741,7 @@ GameObject:
   - component: {fileID: 19832222}
   - component: {fileID: 19932222}
   - component: {fileID: 2158502106468580920}
+  - component: {fileID: 3928713915563769742}
   m_Layer: 0
   m_Name: FireBall Explosion
   m_TagString: Untagged
@@ -4757,7 +4758,7 @@ Transform:
   m_GameObject: {fileID: 132222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.31, y: -6.32, z: 13.40528}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.59586, y: 0.59586, z: 0.59586}
   m_Children:
   - {fileID: 432220}
   - {fileID: 432224}
@@ -9459,7 +9460,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b121b594596b34834864ce9220d2ea84, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.794
+  m_Volume: 0.256
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -9543,6 +9544,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3928713915563769742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9bc8b027ae24d3ebf1795af569d877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &132224
 GameObject:
   m_ObjectHideFlags: 0
