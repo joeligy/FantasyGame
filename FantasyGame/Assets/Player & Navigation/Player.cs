@@ -31,6 +31,11 @@ public class Player : MonoBehaviour
     {
         currentHealth -= damageTaken;
         playerHealthBar.UpdateHealthBar();
+
+        if (currentHealth <= 0)
+        {
+            Invoke("DieAndEndGame", 3f);
+        }
     }
 
     public float GetMagicAsPercentage()
@@ -61,5 +66,13 @@ public class Player : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void DieAndEndGame()
+    {
+        Application.Quit();
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 }
