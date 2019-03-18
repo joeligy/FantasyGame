@@ -27,6 +27,12 @@ public class Player : MonoBehaviour
         return currentHealth / maxHealth;
     }
 
+    public void ReduceHealth(float damageTaken)
+    {
+        currentHealth -= damageTaken;
+        playerHealthBar.UpdateHealthBar();
+    }
+
     public float GetMagicAsPercentage()
     {
         return currentMagic / maxMagic;
