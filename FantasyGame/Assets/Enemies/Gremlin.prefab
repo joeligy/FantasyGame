@@ -3883,7 +3883,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3de090e05bb544db5a0ddff67aa721f9, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4001,6 +4001,8 @@ MonoBehaviour:
   secondsBetweenAttacks: 5
   chaseRadius: 50
   attackRadius: 5
+  gremlinAttack: {fileID: 8300000, guid: d5b07486e1fa842f48f5f0d5ca52718d, type: 3}
+  gremlinDeath: {fileID: 8300000, guid: 3de090e05bb544db5a0ddff67aa721f9, type: 3}
 --- !u!1 &1153091745482540
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] float chaseRadius = 20f;
     [SerializeField] float attackRadius = 5f;
 
+    [SerializeField] AudioClip gremlinAttack;
+    [SerializeField] AudioClip gremlinDeath;
+
     NavMeshAgent nav;
     Player player;
     Animator animator;
@@ -62,7 +65,6 @@ public class Enemy : MonoBehaviour
     {
         if (PlayerInAttackRadius() && (Time.time - lastAttackTime) > secondsBetweenAttacks)
         {
-            animator.SetTrigger("Attack3");
             lastAttackTime = Time.time;
             StartCoroutine(GremlinAttack());
         }
@@ -71,11 +73,15 @@ public class Enemy : MonoBehaviour
     private IEnumerator GremlinAttack()
     {
         nav.isStopped = true;
+        animator.SetTrigger("Attack3");
+        GetComponent<AudioSource>().PlayOneShot(gremlinAttack);
+
         yield return new WaitForSeconds(1f);
         if (PlayerInAttackRadius())
         {
             player.ReduceHealth(attackDamage);
         }
+
         nav.isStopped = false;
     }
 
@@ -89,6 +95,6 @@ public class Enemy : MonoBehaviour
         isAlive = false;
         nav.isStopped = true;
         animator.SetTrigger("Death");
-        GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().PlayOneShot(gremlinDeath);
     }
 }
