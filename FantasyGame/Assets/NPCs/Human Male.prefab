@@ -22254,7 +22254,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333255497466130}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.70710677, y: 0, z: -0, w: 0.70710677}
   m_LocalPosition: {x: -0, y: 0.0013279724, z: 0.0017953491}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -38327,7 +38327,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Meeting Van Graaf
+  conversation: 'Majoor Simeon: Welcome to Rijks Glorious Bay'
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 0}
   exclusive: 0
@@ -58489,7 +58489,19 @@ SkinnedMeshRenderer:
   m_Bones:
   - {fileID: 4421572222530558}
   - {fileID: 4199109917821804}
-  m_BlendShapeWeights: []
+  m_BlendShapeWeights:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   m_RootBone: {fileID: 4199109917821804}
   m_AABB:
     m_Center: {x: -0.0070550973, y: -0.00029105134, z: -0.0327819}
